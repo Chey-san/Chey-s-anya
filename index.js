@@ -172,7 +172,11 @@ Sayonara 👋, @${WAuserName.split("@")[0]},
 
 I hope you will come back soon, but we are not going to miss you though!
 `
-
+    let btn = [{
+    quickReplyButton: {
+    displayText: '✨Menu✨',
+    id: '-menu'
+    }
     let buttonMessage = {
 	image:await getBuffer(ppuser),
     mentions: [num],

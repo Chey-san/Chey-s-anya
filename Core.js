@@ -1492,10 +1492,6 @@ https://chat.whatsapp.com/LS1Xx3fSqg7FpSYSjKWhL5
 
 *GROUP 3*
 https://chat.whatsapp.com/EcycNbJFCVT5ZsG9xIGkqd`)
-
- let buttonshelpm = [
-    {buttonId: `-owner`, buttonText: {displayText: '❤️Owner❤️'}, type: 1}
-    ]
 break
 case 'getsxvdxcmd': {
 if (isBan) return reply(mess.ban)	 			

@@ -1518,7 +1518,29 @@ case 'nsfwmenu':
     if (isBanChat) return reply(mess.bangc)
     if (!AntiNsfw) return reply(mess.nonsfw)
         reply(` *━━━〈  📛 NSFW Menu 📛  〉━━━*\n\nhentaivideo, blowjobgif, hneko, masturbation, thighs, pussy, panties, orgy, ahegao, ass, bdsm, blowjob, cuckold, ero, gasm, cum, femdom, foot, gangbang, glasses, jahy, trap, blowjobgif, spank, hneko, hwaifu, gasm`)
-    break
+        let buttons = [
+        {buttonId: `-menu`, buttonText: {displayText: '✨Bot Menu✨'}, type: 1}
+        ]
+        let buttonMessage = {
+        image: Thumb,
+        jpegThumbnail: BotLogo ,
+        caption: teks,
+        footer: `${BotName }`,
+        buttons: buttons,
+        headerType: 4,
+        /*contextInfo:{externalAdReply:{
+        title:"Powered by Pika",
+        body: " ", 
+        thumbnail: fs.readFileSync("Assets/pic2.jpg"),
+        mediaType:1,
+        mediaUrl: 'https://wallpapercave.com/wp/wp10524580.jpg',
+        sourceUrl: "https://wallpapercave.com/wp/wp10524580.jpg"
+        }}*/
+ 
+        }
+        Miku.sendMessage(m.chat, buttonMessage, { quoted: m })
+        }
+        break
 
 case 'reaction': case 'react': case 'reactions': case 'r':
         if (isBan) return reply(mess.banned)	 			

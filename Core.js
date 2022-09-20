@@ -4810,11 +4810,13 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
       
- const helpmenu = `Konichiwa *${pushname}* Senpai,
+ const helpmenu = `Konichiwa *${pushname}* Darling❤️,
 
-I am *Anya*, a bot developed by *Pika❤️*.
-
-🔥 My prefix is:  ${prefix}
+🔥 *My prefix*         : ( - )
+🔥 *My name*         : 𝙰𝚗𝚢𝚊
+🔥 *User name*      : ${pushname}
+🔥 *Owner name*   : 3.69_pika
+🔥 *Owner no.*       : https://api.whatsapp.com/send?phone=+918811074852
 
 Here's the list of my Commands.
 
@@ -5043,7 +5045,9 @@ Here's the list of my Commands.
 
  *━━━〈  💥 NSFW 💥  〉━━━*
 
-❤️ to use *NSFW* commands, ask to *Admin* or *Owner* 
+❤️ To use *NSFW* commands, ask to *Admin* or *Owner* 
+
+❤️ Type *-nsfw* for NSFW commands.
 
 ❤️ Then type " *${prefix}nsfwmenu* " to get full list of NSFW commands.
 

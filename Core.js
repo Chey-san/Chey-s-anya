@@ -1519,7 +1519,7 @@ case 'nsfwmenu':
     if (!AntiNsfw) return reply(mess.nonsfw)
         reply(` *━━━〈  📛 NSFW Menu 📛  〉━━━*\n\nhentaivideo, blowjobgif, hneko, masturbation, thighs, pussy, panties, orgy, ahegao, ass, bdsm, blowjob, cuckold, ero, gasm, cum, femdom, foot, gangbang, glasses, jahy, trap, blowjobgif, spank, hneko, hwaifu, gasm`)
         let buttons = [
-        {buttonId: `-menu`, buttonText: {displayText: '✨Bot Menu✨'}, type: 1}
+        {buttonId: `-menu`, buttonText: {displayText: '✨Bot Menu✨'}, type: 2}
         ]
         let buttonMessage = {
         image: Thumb,

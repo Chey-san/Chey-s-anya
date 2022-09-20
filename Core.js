@@ -1518,12 +1518,6 @@ case 'nsfwmenu':
     if (isBanChat) return reply(mess.bangc)
     if (!AntiNsfw) return reply(mess.nonsfw)
         reply(` *━━━〈  📛 NSFW Menu 📛  〉━━━*\n\nhentaivideo, blowjobgif, hneko, masturbation, thighs, pussy, panties, orgy, ahegao, ass, bdsm, blowjob, cuckold, ero, gasm, cum, femdom, foot, gangbang, glasses, jahy, trap, blowjobgif, spank, hneko, hwaifu, gasm`)
-        let buttons = [
-        {buttonId: `-menu`, buttonText: {displayText: '✨Menu✨'}, type: 1}
-        ]
-        Miku.sendMessage(m.chat, buttonMessage, { quoted: m })
-        }
-        }
         break
 
 case 'reaction': case 'react': case 'reactions': case 'r':

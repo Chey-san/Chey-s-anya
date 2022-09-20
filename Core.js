@@ -4816,10 +4816,10 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 🔥 *My name*         : 𝙰𝚗𝚢𝚊
 🔥 *User name*      : ${pushname}
 🔥 *Owner name*   : 3.69_pika
-🔥 *Owner no.*       : https://api.whatsapp.com/send?phone=+918811074852
+🔥 *Owner no.*       : http://wa.me//+918811074852
 
-Here's the list of my Commands.
 
+*-* Here's the list of my Commands *-*
 
  
  *━━━〈  🎆 Core 🎆  〉━━━*

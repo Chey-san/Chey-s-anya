@@ -4,18 +4,18 @@
 ## [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Rockstar-ExtraBold&color=A020F0&lines=࿐𝐖𝐞𝐥𝐜𝐨𝐦𝐞+𝐓𝐨+𝒜𝓃𝓎𝒶𝕻𝖎𝕶𝕬༒4O4࿐+❤️)]
    
 </p>
-<h1 align="center"> Miku Nakano (Beta)
+<h1 align="center"> Anya by Pika❤️
 </h1>
 <p align="center"> 
-  Konochiwa Senpai, I am "Miku Nakano" a WhatsApp bot made by Fantox to do everything that is possible on WhatsApp based on WhatsApp Multi Device(MD) Support.
+  Hello Darling ✨, I am "Anya" a WhatsApp bot made by Pika to do everything that is possible on WhatsApp based on WhatsApp Multi Device(MD) Support.
 
 <p align="center">
-  <a href="https://github.com/FantoX001/Miku-MD/fork">
-    <img src="https://img.shields.io/github/forks/FantoX001/Miku-MD?label=Fork&style=social">
+  <a href="https://github.com/Pika4O4/Anya-pika/fork">
+    <img src="https://img.shields.io/github/forks/Pika4O4/Anya-pika?label=Fork&style=social">
     
     
-  <a href="https://github.com/FantoX001/Miku-MD/stargazers">
-    <img src="https://img.shields.io/github/stars/FantoX001/Miku-MD?style=social">
+  <a href="https://github.com/Pika4O4/Anya/stargazers">
+    <img src="https://img.shields.io/github/stars/Pika4O4/Anya-Pika?style=social">
   </a>
 
 <p align="center">

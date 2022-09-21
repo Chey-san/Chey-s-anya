@@ -1732,6 +1732,132 @@ sections
 }
 break
 
+case 'command': {
+let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                listMessage :{
+                    title: `Hi ${pushname}`,
+                    description: `Please Choose The Menu\n\n`,
+                    buttonText: "Menu",
+                    footerText: `${pushname}`,
+                    listType: "SINGLE_SELECT",
+                    sections: [{
+								"title": "Main Features",
+								"rows": [
+									{
+										"title": "Main Menu",
+										"description": "List of main features",
+										"rowId": `${prefix}mainmenu`
+									}
+								]
+							},
+							{
+								"title": "Bot Features",
+								"rows": [
+									{
+										"title": "All Menu",
+										"description": "List of all the features!",
+										"rowId": `${prefix}allmenu`
+									},
+									{
+										"title": "Owner Menu",
+										"description": "List of owner features",
+										"rowId": `${prefix}ownermenu`
+										},
+									{
+										"title": "Group Menu",
+										"description": "List of main features",
+										"rowId": `${prefix}groupmenu`
+										},
+									{
+										"title": "Rpg Menu",
+										"description": "List f Rpg features",
+										"rowId": `${prefix}rpgmenu`
+									},
+									{
+										"title": "Download Menu",
+										"description": "List of download features",
+										"rowId": `${prefix}downloadmenu`
+									},
+									{
+										"title": "Search Menu",
+										"description": "List of searching features",
+										"rowId": `${prefix}searchmenu`
+									},
+									{
+											"title": "Random Menu",
+										"description": "List of random features",
+										"rowId": `${prefix}randommenu`
+										},
+										{
+											"title": "Random Anime Menu",
+										"description": "List of random Anime features",
+										"rowId": `${prefix}randomanimemenu`
+										},
+										{
+											"title": "Fun Menu",
+										"description": "List of fun features",
+										"rowId": `${prefix}funmenu`
+										},
+										{
+											"title": "Convert Menu",
+										"description": "List of convert features",
+										"rowId": `${prefix}convertmenu`
+										},
+										{
+											"title": "Database Menu",
+										"description": "List of database features",
+										"rowId": `${prefix}databasemenu`
+										},
+										{
+											"title": "Voice Changer Menu",
+										"description": "List of Voice Changing features",
+										"rowId": `${prefix}voicechangermenu`
+										},
+										{
+											"title": "TXT-to-IMG Menu",
+										"description": "List Of Textpro features",
+										"rowId": `${prefix}textpromenu`
+										},
+										{
+											"title": "Useless Menu",
+										"description": "List of useless features",
+										"rowId": `${prefix}ownermenu`
+										},
+										{
+											"title": "Horoscope Menu",
+										"description": "List of Horoscope features",
+										"rowId": `${prefix}horoscopemenu`
+										}
+								]
+							},
+							{
+								"title": "Chat With Fellow Users",
+								"rows": [
+									{
+										"title": "Anonymous Chat Menu",
+										"description": "List of anonymous chat features",
+										"rowId": `${prefix}anonymouschatmenu`
+									}
+								]
+							},
+							{
+								"title": "Credit",
+								"rows": [
+									{
+										"title": "Thanks To",
+										"description": "List of credit of The Bot !!",
+										"rowId": `${prefix}tqtt`
+									}
+								]
+							}
+						],
+          listType: 1
+                }
+            }), {})
+            Miku.sendMessage((m.chat, template.message, { messageId: template.key.id })
+            }
+            break
+
 /*
 case 'animesearchxxx': case 'anime':{
     await fetchJson(`https://api.jikan.moe/v4/anime/${q}`)
@@ -4832,7 +4958,7 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 🔥 *User name*    : ${pushname}
 🔥 *Owner name* : 3.69_pika
 🔥 *Owner no.*     : http://wa.me//+918811074852
-🔥 *Group name*  :${groupMetadata.subject}
+🔥 *Group name*  : ${groupMetadata.subject}
 │                                      ❒
 ╰╼━━━━━━━━━━━━╾╯
 
@@ -4843,15 +4969,13 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
  *━━━〈  😻 Core 😻  〉━━━*
 
 ❒✗ -speak
-❒✗ -anya (miku)
+❒✗ -anya 
 ❒✗ -stalk
 ❒✗ -profile
 ❒✗ -help
 ❒✗ -delete
-❒✗ -deleteall
 ❒✗ -listgc
 ❒✗ -listpc
-❒✗ -welcome
 ❒✗ -support
 ❒✗ -repo
 ❒✗ -script
@@ -4869,12 +4993,11 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 ❒✗ -block
 ❒✗ -unblock
 ❒✗ -broadcast
-❒✗ -Delete (bot msg)
+❒✗ -Delete *( bot msg )*
  
-
  *━━━〈  🐦 Group 🐦  〉━━━*
  
-❒✗ -deletethis (any msg)
+❒✗ -deletethis  *( any msg )*
 ❒✗ -promote
 ❒✗ -demote
 ❒✗ -revoke
@@ -4882,12 +5005,12 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 ❒✗ -remove
 ❒✗ -tagall
 ❒✗ -hidetag
-❒✗ -afk (type reason)
+❒✗ -afk  *( type reason )*
 ❒✗ -grouplink
 ❒✗ -setgcpp
 ❒✗ -setname
 ❒✗ -setdesc
-❒✗ -group ( open/close )
+❒✗ -group  *( open/close )*
 ❒✗ -groupsettings
 
  *━━━〈  🔪 Anti Link 🔪  〉━━━*
@@ -5082,12 +5205,11 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 ❤️ Then type " *${prefix}nsfwmenu* " to get full list of NSFW commands.
 
 
-
-
  『  𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪  』
  Powered by : *Pika❤️*
- Using by        : *${pushname}*
+ Using by       : *${pushname}*
  
+
  🔥 If you have any *Bot related* question then ask here *-* https://api.whatsapp.com/send?phone=+918811074852 .
 
  🔥 Type " *${prefix}help* " to get full command list.`

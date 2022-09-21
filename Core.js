@@ -1482,16 +1482,28 @@ case 'botgrup':
 case 'botgroup':
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-reply(` Don't forget to join yeah!
+reply(` Here's the list of some awesome*Bot groups* ❤️✨
 
-*GROUP 1*
-https://chat.whatsapp.com/HYj9wu5Jrv6CROxyeQbHoS
 
-*GROUP 2*
-https://chat.whatsapp.com/LS1Xx3fSqg7FpSYSjKWhL5
 
-*GROUP 3*
-https://chat.whatsapp.com/EcycNbJFCVT5ZsG9xIGkqd`)
+🔥 *Group 1*
+https://chat.whatsapp.com/C5Z7STKARBK28Wln3RcHT2
+
+🔥 *Group 2*
+https://chat.whatsapp.com/GB9m2XdCYk3AYCEomSbYATl
+
+🔥 *Group 3*
+https://chat.whatsapp.com/JvPmGrrlaFZ6lIuVuYOgYbl
+
+🔥 *Group 4*
+https://chat.whatsapp.com/DDWBpH9ciy38RCGYO7RkfM
+
+🔥 *Group 5*
+https://chat.whatsapp.com/JVFC9BHmmk9IiPlsu8raVzl
+
+
+
+❤️ To resister your group here, *Contact here* http://wa.me//+918811074852 `)
 break
 case 'getsxvdxcmd': {
 if (isBan) return reply(mess.ban)	 			
@@ -4813,11 +4825,15 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
       
  const helpmenu = `Konichiwa *${pushname}* Darling❤️,
 
-🔥 *My prefix*         : ( - )
-🔥 *My name*         : 𝙰𝚗𝚢𝚊
-🔥 *User name*      : ${pushname}
-🔥 *Owner name*   : 3.69_pika
-🔥 *Owner no.*       : http://wa.me//+918811074852
+╭╼━᚜ 𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪 ᚛━╾╮
+│                                       ❒
+│🔥 *My prefix*       : ( - )
+│🔥 *My name*       : 𝙰𝚗𝚢𝚊❤️
+│🔥 *User name*    : ${pushname}
+│🔥 *Owner name* : 3.69_pika
+│🔥 *Owner no.*     : http://wa.me//+918811074852
+│                                       ❒
+╰╼━━━━━━━━━━━━╾╯
 
 
 *-* Here's the list of my Commands *-*
@@ -4837,7 +4853,8 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 ❒✗ -welcome
 ❒✗ -support
 ❒✗ -repo
-❒✗ -script 
+❒✗ -script
+❒✗ -botgroups 
 
  *━━━〈  🎀 Owner 🎀  〉━━━*
 

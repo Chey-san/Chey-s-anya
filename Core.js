@@ -1523,7 +1523,8 @@ case 'nsfwmenu':
         ]
         Miku.sendMessage(m.chat, buttonMessage, { quoted: m })
         }
-    break
+	
+        break 
 
 case 'reaction': case 'react': case 'reactions': case 'r':
         if (isBan) return reply(mess.banned)	 			

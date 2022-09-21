@@ -1,6 +1,8 @@
 <p align="center">
-   <a href="https://github.com/Pika4O4">
-    <img src=""  
+   <a href= "https://github.com/Pika4O4">
+ 
+## [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Rockstar-ExtraBold&color=F33A6A&lines=࿐𝐖𝐞𝐥𝐜𝐨𝐦𝐞+𝐓𝐨+ٱللَّٰهPIKA༒40R࿐+💕) ]
+   
 </p>
 <h1 align="center"> Miku Nakano (Beta)
 </h1>

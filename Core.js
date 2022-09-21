@@ -1854,7 +1854,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
           listType: 1
                 }
             }), {})
-            Miku.sendMessage((m.chat, template.message, { messageId: template.key.id })
+            Miku.sendMessage((m.chat, template.message, { messageId: template.key.id }))
             }
             break
 

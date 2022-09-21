@@ -1517,14 +1517,8 @@ case 'nsfwmenu':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!AntiNsfw) return reply(mess.nonsfw)
-        reply(` *━━━〈  📛 NSFW Menu 📛  〉━━━*\n\nhentaivideo, blowjobgif, hneko, masturbation, thighs, pussy, panties, orgy, ahegao, ass, bdsm, blowjob, cuckold, ero, gasm, cum, femdom, foot, gangbang, glasses, jahy, trap, blowjobgif, spank, hneko, hwaifu, gasm`)
-        let buttons = [
-        {buttonId: `-menu`, buttonText: {displayText: '✨Menu✨'}, type: 1}
-        ]
-        Miku.sendMessage(m.chat, buttonMessage, { quoted: m })
-        }
-	
-break 
+       reply =` *━━━〈  📛 NSFW Menu 📛  〉━━━*\n\ ${prefix}nhentaivideo ,\n${prefix}blowjobgif ,\n${prefix}hneko ,\n${prefix}masturbation,\n${prefix}thighs ,\n${prefix}pussy ,\n${prefix}panties ,\n${prefix}orgy ,\n${prefix}ahegao ,\n${prefix}ass ,\n${prefix}bdsm ,\n$[prefix}blowjob ,\n${prefix}cuckold ,${prefix}ero ,\n${prefix}gasm ,\n${prefix}cum ,\n${prefix}femdom ,${prefix}foot ,\n${prefix}gangbang ,\n${prefix}glasses ,\n${prefix}jahy ,\n${prefix}trap ,\n${prefix}blowjobgif ,${prefix}spank ,${prefix}hneko ,\n${prefix}hwaifu ,\n${prefix}gasm\n`
+	break
 
 case 'reaction': case 'react': case 'reactions': case 'r':
         if (isBan) return reply(mess.banned)	 			
@@ -1543,8 +1537,12 @@ case 'limituser': case 'userlimit': case 'limit':
                  }
                 reply(txt)       
               }
-	break
+             break
+            
     
+
+
+
 case 'ringtone': {
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)

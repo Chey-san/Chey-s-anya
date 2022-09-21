@@ -4830,7 +4830,6 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 🔥 *My prefix*       : ( - )
 🔥 *My name*       : 𝙰𝚗𝚢𝚊❤️
 🔥 *User name*    : ${pushname}
-🔥 *Group name*   : ${metadata.subject}
 🔥 *Owner name* : 3.69_pika
 🔥 *Owner no.*     : http://wa.me//+918811074852
 │                                      ❒

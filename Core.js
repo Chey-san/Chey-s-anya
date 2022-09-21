@@ -1543,11 +1543,8 @@ case 'limituser': case 'userlimit': case 'limit':
                  }
                 reply(txt)       
               }
-             break
+	break
     
-
-
-
 case 'ringtone': {
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)

@@ -216,7 +216,7 @@ const mongoose = require("mongoose");
 /////////// -  DM chatbot (Delete this part to turn off DM Chat Bot) - //////////////////
 
 if (!isCmd && !m.isGroup){
-    const botreply = await axios.get(`http://api.brainshop.ai/get?bid=168848&key=v4GwpQWOS3tSQddf&uid=[uid]&msg=[msg]`)
+    const botreply = await axios.get(`http://api.brainshop.ai/get?bid=168848&key=v4GwpQWOS3tSQddf&uid=[uid]&msg=[${budy}]`)
     txt = `${botreply.data.cnt}`
     m.reply(txt)
     }
@@ -2443,7 +2443,7 @@ if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
  if (!isAdmins && !isCreator) return replay(mess.useradmin)
  let teks = `「 _Tag All_ 」
-  
+ *Group name :${groupMetadata.subject}
  *Message : ${args.join(" ") ? args.join(" ") : 'no message'}*\n\n`
  for (let mem of participants) {
  teks += `» @${mem.id.split('@')[0]}\n`
@@ -4832,6 +4832,7 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 🔥 *User name*    : ${pushname}
 🔥 *Owner name* : 3.69_pika
 🔥 *Owner no.*     : http://wa.me//+918811074852
+🔥 *Group name*  :${groupMetadata.subject}
 │                                      ❒
 ╰╼━━━━━━━━━━━━╾╯
 

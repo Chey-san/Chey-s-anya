@@ -1522,7 +1522,6 @@ case 'nsfwmenu':
         {buttonId: `-menu`, buttonText: {displayText: '✨Menu✨'}, type: 1}
         ]
         Miku.sendMessage(m.chat, buttonMessage, { quoted: m })
-        })
         }
         break
 

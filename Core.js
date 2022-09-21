@@ -1482,7 +1482,7 @@ case 'botgrup':
 case 'botgroup':
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-reply(` Here's the list of some awesome*Bot groups* ❤️✨
+reply(` Here's the list of some awesome *Bot groups* ❤️✨
 
 
 
@@ -1503,7 +1503,7 @@ https://chat.whatsapp.com/JVFC9BHmmk9IiPlsu8raVzl
 
 
 
-❤️ To resister your group here, *Contact here* http://wa.me//+918811074852 `)
+❤️ To resister your group in this list, *Contact here* http://wa.me//+918811074852 `)
 break
 case 'getsxvdxcmd': {
 if (isBan) return reply(mess.ban)	 			
@@ -1691,8 +1691,8 @@ let sections = []
   break
 
 
-  case 'grupsetting':
-    case 'groupsetting':{
+  case 'groupsetting':
+    case 'groupsettings':{
         if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
             let sections = []
@@ -1722,10 +1722,10 @@ if (isBanChat) return reply(mess.bangc)
             const sendm =  Miku.sendMessage(
 from, 
 {
-text: "Group Settings",
+text: " Shortcuts for your group setting... ",
 footer: BotName,
-title: "Set your group settings here...",
-buttonText: "Click Button",
+title: " *Group Settings* ",
+buttonText: "Tap here❤️",
 sections
 }, { quoted : m }
 )  
@@ -1810,7 +1810,7 @@ case 'delete': case 'del': {
  break
 */
 
- case 'deleteall': case 'delall': case 'delete': case 'del': {
+ case 'deletethis': case 'delthis': case 'deletethismessage': case 'delthismsg': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!isBotAdmins) return replay(mess.botadmin)
@@ -2609,7 +2609,7 @@ let mentioned = participants.map(v => v.jid)
     break
 
 
-    case 'group': case 'grup': {
+    case 'group': case 'groups': {
         if (isBan) return reply(mess.banned)	 			
      if (isBanChat) return reply(mess.bangc)
      if (!m.isGroup) return replay(mess.grouponly)
@@ -4823,23 +4823,24 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
       
- const helpmenu = `Konichiwa *${pushname}* Darling❤️,
+ const helpmenu = `Hey *${pushname}* Darling❤️,
 
 ╭╼━᚜ 𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪 ᚛━╾╮
-│                                       ❒
-│🔥 *My prefix*       : ( - )
-│🔥 *My name*       : 𝙰𝚗𝚢𝚊❤️
-│🔥 *User name*    : ${pushname}
-│🔥 *Owner name* : 3.69_pika
-│🔥 *Owner no.*     : http://wa.me//+918811074852
-│                                       ❒
+│                                      ❒
+🔥 *My prefix*       : ( - )
+🔥 *My name*       : 𝙰𝚗𝚢𝚊❤️
+🔥 *User name*    : ${pushname}
+🔥 *Group name*   : ${metadata.subject}
+🔥 *Owner name* : 3.69_pika
+🔥 *Owner no.*     : http://wa.me//+918811074852
+│                                      ❒
 ╰╼━━━━━━━━━━━━╾╯
 
 
 *-* Here's the list of my Commands *-*
 
  
- *━━━〈  🎆 Core 🎆  〉━━━*
+ *━━━〈  😻 Core 😻  〉━━━*
 
 ❒✗ -speak
 ❒✗ -anya (miku)
@@ -4856,7 +4857,7 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 ❒✗ -script
 ❒✗ -botgroups 
 
- *━━━〈  🎀 Owner 🎀  〉━━━*
+ *━━━〈  🥵 Owner 🥵  〉━━━*
 
 ❒✗ -self
 ❒✗ -public
@@ -4867,10 +4868,13 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 ❒✗ -bye
 ❒✗ -block
 ❒✗ -unblock
-❒✗ -broadcast 
-
- *━━━〈  ⭕ Group ⭕  〉━━━*
+❒✗ -broadcast
+❒✗ -Delete (bot msg)
  
+
+ *━━━〈  🐦 Group 🐦  〉━━━*
+ 
+❒✗ -deletethis (any msg)
 ❒✗ -promote
 ❒✗ -demote
 ❒✗ -revoke
@@ -4878,14 +4882,15 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 ❒✗ -remove
 ❒✗ -tagall
 ❒✗ -hidetag
-❒✗ -groupsetting
+❒✗ -afk (type reason)
 ❒✗ -grouplink
 ❒✗ -setgcpp
 ❒✗ -setname
 ❒✗ -setdesc
-❒✗ -group 
+❒✗ -group ( open/close )
+❒✗ -groupsettings
 
- *━━━〈  ➰ Anti Link ➰  〉━━━*
+ *━━━〈  🔪 Anti Link 🔪  〉━━━*
  
 ❒✗ -antilinkgc
 ❒✗ -antilinktg
@@ -4898,11 +4903,13 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 ❒✗ -antilinkall
 ❒✗ -antiwame
 
- *━━━〈  🔍 Search 🔍  〉━━━*
+ *━━━〈  🧐 Search 🧐  〉━━━*
 
 ❒✗ -play
 ❒✗ -song
 ❒✗ -yts
+❒✗ -getmusic
+❒✗ -getvideo
 ❒✗ -lyrics
 ❒✗ -google
 ❒✗ -gimage
@@ -4919,7 +4926,7 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 ❒✗ -manga
 ❒✗ -ringtone  
 
- *━━━〈  🔰 Convert 🔰  〉━━━*
+ *━━━〈  🫧 Convert 🫧  〉━━━*
 
 ❒✗ -sticker
 ❒✗ -toimg
@@ -4947,7 +4954,7 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 ❒✗ -slow
 ❒✗ -squirrel
 
- *━━━〈  📍 Reactions 📍  〉━━━*
+ *━━━〈  👻 Reactions 👻  〉━━━*
 
 ❒✗ -bonk
 ❒✗ -cry
@@ -4975,11 +4982,14 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 ❒✗ -dance
 ❒✗ -cringe
 
- *━━━〈  🌌 Downloader 🌌  〉━━━*
+ *━━━〈  🎃 Downloader 🎃  〉━━━*
 
 ❒✗ -play
+❒✗ -jpeg
 ❒✗ -ytmp3
+❒✗ -ytmp3x
 ❒✗ -ytmp4
+❒✗ -ytmp4x
 ❒✗ -ytvideo
 ❒✗ -mediafire
 ❒✗ -instagram
@@ -4987,13 +4997,14 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 ❒✗ -facebook
 ❒✗ -fbmp3
 ❒✗ -twitter
+❒✗ -twitterxx
 ❒✗ -twittermp3
 ❒✗ -tiktok
 ❒✗ -tiktokaudio
 ❒✗ -tiktoknowm
 ❒✗ -mediafire  
 
- *━━━〈  🈴 Weeb 🈴  〉━━━*
+ *━━━〈  ❤️ Weeb ❤️  〉━━━*
 
 ❒✗ -crosplay
 ❒✗ -waifu
@@ -5019,7 +5030,7 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 ❒✗ -anime
 ❒✗ -manga
 
- *━━━〈  ♨️ Informative ♨️  〉━━━*
+ *━━━〈  🧮 Informative 🧮  〉━━━*
 
 ❒✗ -animequote
 ❒✗ -quote
@@ -5027,14 +5038,15 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 ❒✗ -earthquake
 ❒✗ -wiki
 
- *━━━〈  🎗 Others 🎗  〉━━━*
+ *━━━〈  ☕ Others ☕  〉━━━*
 
 ❒✗ -stickermeme
 ❒✗ -quotes
 ❒✗ -darkjoke 
 
- *━━━〈  🎐 Fun 🎐  〉━━━*
+ *━━━〈  💃 Fun 💃  〉━━━*
 
+❒✗ -emojimix
 ❒✗ -reaction
 ❒✗ -truth
 ❒✗ -dare
@@ -5061,7 +5073,7 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 ❒✗ -fliptext
 ❒✗ -toletter
 
- *━━━〈  💥 NSFW 💥  〉━━━*
+ *━━━〈  🤤 NSFW 🤤  〉━━━*
 
 ❤️ To use *NSFW* commands, ask to *Admin* or *Owner* 
 
@@ -5072,9 +5084,9 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 
 
 
- 『  *${global.BotName}*  』
- Powered by: *Pika❤️*
-
+ 『  𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪  』
+ Powered by : *Pika❤️*
+ Using by        : *${pushname}*
  
  🔥 If you have any *Bot related* question then ask here *-* https://api.whatsapp.com/send?phone=+918811074852 .
 

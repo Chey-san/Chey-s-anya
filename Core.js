@@ -2592,17 +2592,17 @@ if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
  if (!isAdmins && !isCreator) return replay(mess.useradmin) 
  let Text = `
-╭╼━᚜ 𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪 ᚛━╾╮
-│                                      ❒
-│       *༺ TAGALL ༻*
+╭╼━━━᚜ 𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪 ᚛━━━╾╮
+│                                                 ❒
+│            *༺ TAGALL ༻*
 │
 🔥 *Group name* : ${groupMetadata.subject}
 ├───────────♡
 🔥 *Message*      : ${args.join(" ") ? args.join(" ") : 'no message'}
 ├───────────♡
 🔥 *Announcer*   : @${m.sender.split('@')[0]}
-╰╼━━━━━━━━━━━━❒ \n\n╭╼━᚜ 𝓜𝓮𝓶𝓫𝓮𝓻𝓼 𝓝𝓪𝓶𝓮 ᚛━╾╮
-╽                                       ❒ ` 
+╰╼━━━━━━━━━━━━━━━━━❒ \n\n╭╼━━━᚜ 𝓜𝓮𝓶𝓫𝓮𝓻𝓼 𝓝𝓪𝓶𝓮 ᚛━━━╾╮
+╽                                                 ❒  ` 
                 for (let mem of participants) {
                 Text += `\n┃🔥@${mem.id.split('@')[0]} `
                 }
@@ -5242,14 +5242,12 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
  Using by       : *${pushname}*
  
 
- 🔥 If you have any *Bot related* question then ask here *-* https://api.whatsapp.com/send?phone=+918811074852 .
-
- 🔥 Type " *${prefix}help* " to get full command list.`
+ 🔥 If you have any *Bot related* question then ask here *-* http://wa.me//+918811074852 . `
     
 
- let buttonshelpm = [
-    {buttonId: `-owner`, buttonText: {displayText: '❤️Owner❤️'}, type: 1}
-    ]
+ let buttonshelpm = [{buttonId: `${prefix}owner`, buttonText: {displayText: `❤️owner❤️`}, type: 1},
+		     {buttonId: `${prefix}groupsettings`, buttonText: {displayText: `Grp settings⚙️`}, type: 1}
+		    ]
                 let buttonMessage = {
                     video:fs.readFileSync('./system/miku2.mp4'),gifPlayback:true,
                     caption: helpmenu,
@@ -5287,6 +5285,21 @@ case '':
                 }
 break
 
+case 'alive':
+    if (isBan) return reply(mess.banned)	 			
+    if (isBanChat) return reply(mess.bangc)
+
+const txt = `Hey ${pushname} Darling❤️, \n I'm online.`
+const mikuarray= [
+            "https://c.tenor.com/hjL3MnIsB88AAAPo/marin-kitagawa-kitagawa-marin.mp4"
+            
+            ]
+        
+            const mikuselection = mikuarray[Math.floor(Math.random()*mikuarray.length)]
+        
+            Miku.sendMessage(from,{video:{url:mikuselection},gifPlayback:true,caption:txt},{quoted:m})
+
+break
 
 
 case 'Anya':

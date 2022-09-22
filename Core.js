@@ -210,9 +210,15 @@ const isQuotedAudio = m.mtype === 'extendedTextMessage' && content.includes('aud
 
 const mongoose = require("mongoose");
 
-
-
-
+//bgm code//
+for (let nexus of vien){
+    if (budy == nexus){
+	    result = fs.readFileSync(`./Anymedia/${ayu}.mp3`)
+	    Miku.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4' , ptt: true }, { quoted: m})
+	}
+	} 
+	
+/////////////////////////////////////////
 /////////// -  DM chatbot (Delete this part to turn off DM Chat Bot) - //////////////////
 
 if (!isCmd && !m.isGroup){

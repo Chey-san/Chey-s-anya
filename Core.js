@@ -2598,7 +2598,7 @@ if (isBanChat) return reply(mess.bangc)
 ╰╼━━━━━━━━━━━━❒ \n\n╭╼━᚜ 𝓜𝓮𝓶𝓫𝓮𝓻𝓼 𝓝𝓪𝓶𝓮 ᚛━╾╮
 ╽                                       ❒` 
                 for (let mem of participants) {
-                Text += `\n┃🔥@${mem.id.split('@')[0]}\n`
+                Text += `\n┃🔥@${mem.id.split('@')[0]}`
                 }
                 Miku.sendMessage(m.chat, { text: Text, mentions: participants.map(a => a.id) }, { quoted: m })
                 }

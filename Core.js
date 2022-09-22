@@ -1854,9 +1854,30 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
           listType: 1
                 }
             }), {})
-            Miku.sendMessage(m.chat, template.message, { messageId: template.key.id })
+                 sections.push(yy)
             }
-            }
+            const sendm =  Miku.sendMessage(
+
+from, 
+
+{
+
+text: " Shortcuts for your group setting... ",
+
+footer: BotName,
+
+title: " *Group Settings* ",
+
+buttonText: "Tap here❤️",
+
+sections
+
+}, { quoted : m }
+
+)  
+
+}
+
 break
 
 /*

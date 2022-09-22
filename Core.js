@@ -1733,14 +1733,11 @@ sections
 break
 
 case 'command': {
-let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
-                listMessage :{
-                    title: `Hi ${pushname}`,
-                    description: `Please Choose The Menu\n\n`,
-                    buttonText: "Menu",
-                    footerText: `${pushname}`,
-                    listType: "SINGLE_SELECT",
-                    sections: [{
+      if (isBan) return reply(mess.banned)	 			
+
+if (isBanChat) return reply(mess.bangc)
+
+            let sections = [{
 								"title": "Main Features",
 								"rows": [
 									{

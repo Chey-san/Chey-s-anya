@@ -2580,29 +2580,29 @@ if (isBanChat) return reply(mess.bangc)
  }
  break
 
- case 'tag': case 'tagall': case 'all':{
+  case 'tag': case 'tagall': case 'all':{
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
- if (!isAdmins && !isCreator) return replay(mess.useradmin)
- let teks = `
+ if (!isAdmins && !isCreator) return replay(mess.useradmin) 
+ let Text = `
 ╭╼━᚜ 𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪 ᚛━╾╮
 │                                      ❒
 │       *༺ TAGALL ༻*
 │
-🔥 *Group name* : *${groupMetadata.subject}*
+🔥 *Group name* : ${groupMetadata.subject}
 ├───────────♡
-🔥 *Message*      :  ${args.join(" ") ? args.join(" ") : 'no message'}*
+🔥 *Message*      : ${args.join(" ") ? args.join(" ") : 'no message'}
 ├───────────♡
-🔥 *Announcer*   :   @${m.sender.split('@')[0]}
+🔥 *Announcer*   : @${m.sender.split('@')[0]}
 ╰╼━━━━━━━━━━━━❒ \n\n╭╼━᚜ 𝓜𝓮𝓶𝓫𝓮𝓻𝓼 𝓝𝓪𝓶𝓮 ᚛━╾╮
 ╽                                       ❒` 
-                      for (let mem of participants) {
-                      Text += `\n┃🔥@${mem.id.split('@')[0]}\n`
-                      }
-                      Miku.sendMessage(m.chat, { text: Text, mentions: participants.map(a => a.id) }, { quoted: m })
-                      }
-                      break
+                for (let mem of participants) {
+                Text += `\n┃🔥@${mem.id.split('@')[0]}\n`
+                }
+                Miku.sendMessage(m.chat, { text: Text, mentions: participants.map(a => a.id) }, { quoted: m })
+                }
+                break
 
  case 'hidetag': {
     if (isBan) return reply(mess.banned)	 			

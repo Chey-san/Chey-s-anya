@@ -2597,12 +2597,12 @@ if (isBanChat) return reply(mess.bangc)
 🔥 *Announcer*   :   @${m.sender.split('@')[0]}
 ╰╼━━━━━━━━━━━━❒ \n\n╭╼━᚜ 𝓜𝓮𝓶𝓫𝓮𝓻𝓼 𝓝𝓪𝓶𝓮 ᚛━╾╮
 ╽                                       ❒` 
-for (let mem of participants) {
-	teks+=`\n┃🔥@${mem.id.split('@')[0]}`
-		Miku.sendMessage(m.chat,{ text:teks, mentions: participants.map(a => a.id) },{quoted: m })
-		}
-}
-break
+                      for (let mem of participants) {
+                      Text += `\n┃🔥@${mem.id.split('@')[0]}\n`
+                      }
+                      Miku.sendMessage(m.chat, { text: Text, mentions: participants.map(a => a.id) }, { quoted: m })
+                      }
+                      break
 
  case 'hidetag': {
     if (isBan) return reply(mess.banned)	 			

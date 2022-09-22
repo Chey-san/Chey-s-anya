@@ -1857,7 +1857,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
             Miku.sendMessage(m.chat, template.message, { messageId: template.key.id })
             }
             }
-            break
+break
 
 /*
 case 'animesearchxxx': case 'anime':{

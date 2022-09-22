@@ -2585,15 +2585,24 @@ if (isBanChat) return reply(mess.bangc)
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
  if (!isAdmins && !isCreator) return replay(mess.useradmin)
- let teks = `「 _Tag All_ 」
- *Group name :${groupMetadata.subject}
- *Message : ${args.join(" ") ? args.join(" ") : 'no message'}*\n\n`
- for (let mem of participants) {
- teks += `» @${mem.id.split('@')[0]}\n`
- }
- Miku.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: m })
- }
- break
+ let teks = `
+╭╼━᚜ 𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪 ᚛━╾╮
+│                                      ❒
+│       *༺ TAGALL ༻*
+│
+🔥 *Group name* : *${groupMetadata.subject}*
+├───────────♡
+🔥 *Message*      :  ${args.join(" ") ? args.join(" ") : 'no message'}*
+├───────────♡
+🔥 *Announcer*   :   @${m.sender.split('@')[0]}
+╰╼━━━━━━━━━━━━❒ \n\n╭╼━᚜ 𝓜𝓮𝓶𝓫𝓮𝓻𝓼 𝓝𝓪𝓶𝓮 ᚛━╾╮
+╽                                       ❒` 
+for (let mem of participants) {
+	teks+=`\n┃🔥@${mem.id.split('@')[0]}`
+		Miku.sendMessage(m.chat,{ text:teks, mentions: participants.map(a => a.id) },{quoted: m })
+		}
+}
+break
 
  case 'hidetag': {
     if (isBan) return reply(mess.banned)	 			

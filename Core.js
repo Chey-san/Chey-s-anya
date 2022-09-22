@@ -1732,7 +1732,7 @@ sections
 }
 break
 
-case 'command': {
+/* case 'command': {
       if (isBan) return reply(mess.banned)	 			
 
 if (isBanChat) return reply(mess.bangc)
@@ -1848,9 +1848,7 @@ if (isBanChat) return reply(mess.bangc)
 								]
 							}
 						],
-          listType: 1
-                }
-            }), {})
+          
                  sections.push(yy)
             }
             const sendm =  Miku.sendMessage(
@@ -1875,7 +1873,7 @@ sections
 
 }
 
-break
+break*/
 
 /*
 case 'animesearchxxx': case 'anime':{

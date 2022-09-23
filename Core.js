@@ -5302,12 +5302,11 @@ const mikuarray= [
 break
 
 
-
 case 'Anya':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 
-const txt = `Do you love ${global.BotName} ? Then we are the same.`
+const txt = `Do you love *${global.BotName}*? Then we are the same.`
 const mikuarray= [
             "https://c.tenor.com/SOeIW-QVZvoAAAPo/scared-the-quintessential-quintuplets.mp4",
             "https://c.tenor.com/FDe7lTs0xvMAAAPo/miku-nakano-nakano-miku.mp4",
@@ -5350,6 +5349,7 @@ const mikuarray= [
 
 break
 
+
 case 'add':{     			
     if (!m.isGroup) return replay(mess.grouponly)
  if (!isBotAdmins) return replay(mess.botadmin)
@@ -5358,6 +5358,7 @@ case 'add':{
   await Miku.groupParticipantsUpdate(m.chat, [users], 'add').then((res) => replay(`User Added Successfully in this group by ${global.BotName} !`)).catch((err) => replay(`Cannot add that user to this group!`))
  }
  break
+
 
 
  case "tts":  case "texttospeech":  case "say": case "speak":{

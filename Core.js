@@ -4988,8 +4988,8 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 🔥 *My prefix*       : ( - )
 🔥 *My name*       : 𝙰𝚗𝚢𝚊❤️
 🔥 *User name*    : ${pushname}
-🔥 *Owner name* : 3.69_pika
-🔥 *Owner no.*     : http://wa.me//+918811074852
+🔥 *Owner name* : ${global.OwnerName}
+🔥 *Owner no.*     : http://wa.me//${global.Owner}
 🔥 *Group name*  : ${groupMetadata.subject}
 │                                      ❒
 ╰╼━━━━━━━━━━━━╾╯
@@ -5242,7 +5242,7 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
  Using by       : *${pushname}*
  
 
- 🔥 If you have any *Bot related* question then ask here *-* http://wa.me//+918811074852 . `
+ 🔥 If you have any *Bot related* question then ask here *-* http://wa.me//${global.Owner} . `
     
 
  let buttonshelpm = [{buttonId: `${prefix}owner`, buttonText: {displayText: `❤️owner❤️`}, type: 1},

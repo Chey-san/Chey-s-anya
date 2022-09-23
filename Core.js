@@ -5247,7 +5247,7 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 
  let buttonshelpm = [{buttonId: `${prefix}owner`, buttonText: {displayText: `❤️owner❤️`}, type: 1},
 		     {buttonId: `${prefix}tagall`, buttonText: {displayText: `Tag all ✨`}, type: 1},
-                     {quickReplyButton: {displayText: '✨Menu✨',id: '-menu'}  }, {quickReplyButton: {displayText: 'Bot Owner',id: '-owner'}}
+                     {buttonId: `${prefix}antilinkall`, buttonText: {displayText: `Antilink 🐦`}, type: 1}       	     
 		    ]
                 let buttonMessage = {
                     video:fs.readFileSync('./system/miku2.mp4'),gifPlayback:true,

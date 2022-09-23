@@ -5261,7 +5261,7 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 break
  
 
-case '':
+case '': case 'Alive': case 'alive': case 'Bot': case 'bot':
     if(isCmd){
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
@@ -5269,7 +5269,7 @@ case '':
       mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
     
         
- const needhelpmenu = `Do you need help ${pushname} Senpai? Type *${prefix}help* to get my full command list.`
+ const needhelpmenu = `Hey ${pushname} darling 😚,\n *${global.BotName}* is online❤️, type *-help* for my full command's. `
      
          let butRun = [
                 {buttonId: `-help`, buttonText: {displayText: 'Help'}, type: 1}

@@ -213,7 +213,7 @@ const mongoose = require("mongoose");
 //bgm code//
 for (let nexus of vien){
     if (budy == nexus){
-	    result = fs.readFileSync(`./Anymedia/${ayu}.mp3`)
+	    result = fs.readFileSync(`./Anymedia/${nexus}.mp3`)
 	    Miku.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4' , ptt: true }, { quoted: m})
 	}
 	} 
@@ -5285,7 +5285,7 @@ case '':
                 }
 break
 
-/*case 'alive':
+case 'alive':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 
@@ -5299,7 +5299,8 @@ const mikuarray= [
         
             Miku.sendMessage(from,{video:{url:mikuselection},gifPlayback:true,caption:txt},{quoted:m})
 
-break*/
+break
+
 
 
 case 'Anya':

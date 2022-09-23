@@ -4986,7 +4986,7 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 ╭╼━᚜ 𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪 ᚛━╾╮
 │                                      ❒
 🔥 *My prefix*       : ( - )
-🔥 *My name*       : 𝙰𝚗𝚢𝚊❤️
+🔥 *My name*       : ${global.BotName}
 🔥 *User name*    : ${pushname}
 🔥 *Owner name* : ${global.OwnerName}
 🔥 *Owner no.*     : http://wa.me//${global.Owner}
@@ -5001,7 +5001,7 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
  *━━━〈  😻 Core 😻  〉━━━*
 
 ❒✗ -speak
-❒✗ -anya 
+❒✗ -${global.BotName} 
 ❒✗ -stalk
 ❒✗ -profile
 ❒✗ -help
@@ -5306,7 +5306,7 @@ case 'Anya':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 
-const txt = `Do you love Anya (miku) ? Then we are the same.`
+const txt = `Do you love ${global.BotName} ? Then we are the same.`
 const mikuarray= [
             "https://c.tenor.com/SOeIW-QVZvoAAAPo/scared-the-quintessential-quintuplets.mp4",
             "https://c.tenor.com/FDe7lTs0xvMAAAPo/miku-nakano-nakano-miku.mp4",
@@ -5354,7 +5354,7 @@ case 'add':{
  if (!isBotAdmins) return replay(mess.botadmin)
  let users = m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
  if (users.length == 0) return replay(`Please write the number of the person you want to add to thhis group`)
-  await Miku.groupParticipantsUpdate(m.chat, [users], 'add').then((res) => replay(`User Added Successfully!`)).catch((err) => replay(`Cannot add that user to this group!`))
+  await Miku.groupParticipantsUpdate(m.chat, [users], 'add').then((res) => replay(`User Added Successfully in this group by ${global.BotName} !`)).catch((err) => replay(`Cannot add that user to this group!`))
  }
  break
 

@@ -5428,9 +5428,9 @@ case 'lava': case 'rock': case 'bloodglas': case 'hallowen': case 'darkgold': ca
         : m.quoted && m.quoted.text
         ? m.quoted.text
         : m.text;
-      const SpeakEngine = require("google-tts-api"); 
-      const texttospeechurl = SpeakEngine.getAudioUrl(texttosay, {lang: "en", slow: false, host: "https://translate.google.com",});
-      Miku.sendMessage(m.chat,{audio: {url: texttospeechurl,},mimetype: "audio/mpeg",fileName: `MikuSpeechEngine.mp3`,},{quoted: m,});
+      const SpeakEngine = require("voicemaker-api"); 
+      const texttospeechurl = SpeakEngine.getAudioUrl(texttosay, {lang: "en", slow: false, host: "https://developer.voicemaker.in/voice/api",});
+      Miku.sendMessage(m.chat,{audio: {url: texttospeechurl,},mimetype: "audio/mpeg",fileName: `AnyaSpeechEngine.mp3`,},{quoted: m,});
     }
     break;
 

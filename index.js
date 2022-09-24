@@ -195,6 +195,9 @@ Miku.sendMessage(anu.id, buttonMessage)
 🔥 *Group name* : *Bot testing*
 ╰╼━━━━━━━━━━━━━╾╯
 
+🎃 *That was a nice time!*
+*when we were together but now get lost, we will not gonna miss you though* .
+
 Type *-help* to use this Bot 😚.
 `
 

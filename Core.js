@@ -217,7 +217,13 @@ for (let nexus of vien){
 	    Miku.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4' , ptt: true }, { quoted: m})
 	}
 	} 
-	
+
+for (let nexus of autosticker){
+    if (budy == nexus){
+	    result = fs.readFileSync(`./Anymedia/${nexus}.webp`)
+	    Miku.sendMessage(m.chat, { sticker: result, mimetype: 'sticker/webp' , ptt: true }, { quoted: m})
+	}
+	} 	
 /////////////////////////////////////////
 /////////// -  DM chatbot (Delete this part to turn off DM Chat Bot) - //////////////////
 

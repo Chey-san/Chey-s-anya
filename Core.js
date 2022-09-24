@@ -2008,7 +2008,16 @@ await Miku.sendMessage(m.chat, { delete: key })
   } else {
   loldd = metadata.owner
   }
-  teks += `\n\nName : ${metadata.subject ? metadata.subject : "undefined"}\nOwner : ${loldd ? '@' + loldd.split("@")[0] : "undefined"}\nID : ${metadata.id ? metadata.id : "undefined"}\nMade : ${metadata.creation ? moment(metadata.creation * 1000).tz('Asia/Kolkata').format('DD/MM/YYYY HH:mm:ss') : "undefined"}\nMember : ${metadata.participants.length ? metadata.participants.length : "undefined"}`
+  teks += `\n*MY GROUP USER LIST* 🤏🕶️🐤
+
+╭╼━━━━━᚜ 𝓤𝓼𝓮𝓻 𝓭𝓪𝓽𝓪 ᚛━━━━━╾╮
+╽
+❤️ *Name*  : ${metadata.subject ? metadata.subject : "undefined"}
+🥵 *Owner* : ${loldd ? '@' + loldd.split("@")[0] : "undefined"}
+😻 *Grp ID* : ${metadata.id ? metadata.id : "undefined"}
+🎃 *Creation time* : ${metadata.creation ? moment(metadata.creation * 1000).tz('Asia/Kolkata').format('DD/MM/YYYY HH:mm:ss') : "undefined"}
+🍓 *Members* : ${metadata.participants.length ? metadata.participants.length : "undefined"}
+╰╼━━━━━━━━━━━━━━━━━━╾╯`
  }
  Miku.sendTextWithMentions(m.chat, teks, m)
  }
@@ -5363,7 +5372,7 @@ case 'alive':
       mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
     
         
- const needhelpmenu = `Hey ${pushname} Baby 😚,\n\n❒✗ - *${global.BotName} is online❤️* ,\n🍓 Type *-help* for my full commands. `
+ const needhelpmenu = `Hey ${pushname} Baby 😚,\n\n❒✗ - *${global.BotName} is online❤️* ,\n\n🍓 Type *-help* for my full commands. `
      
          let butRun = [
                 {buttonId: `-owner`, buttonText: {displayText: '❤️Owner❤️'}, type: 1},
@@ -5381,7 +5390,7 @@ case 'alive':
                 }
 break
 
-case '':
+/*case '':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 
@@ -5394,7 +5403,7 @@ const mikuarray= [
         
             Miku.sendMessage(from,{video:{url:mikuselection},gifPlayback:true,caption:txts},{quoted:m})
 
-break
+break*/
 
 
 case 'Anya':

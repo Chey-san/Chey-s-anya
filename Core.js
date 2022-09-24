@@ -1953,7 +1953,6 @@ await Miku.sendMessage(from, {text:"reply -s to this image to make sticker"}, {q
 }
 break
 
-/*
 case 'delete': case 'del': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
@@ -1963,7 +1962,6 @@ case 'delete': case 'del': {
  Miku.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: true, id: m.quoted.id, participant: m.quoted.sender } })
  }
  break
-*/
 
  case 'deletethis': case 'delthis': case 'deletethismessage': case 'delthismsg': {
     if (isBan) return reply(mess.banned)	 			
@@ -2364,6 +2362,37 @@ await Miku.sendMessage(m.chat, { delete: key })
    }
    break
 
+   case 'antiVirtex': {
+    if (isBan) return reply(mess.banned)	 			
+ if (isBanChat) return reply(mess.bangc)
+ if (!m.isGroup) return replay(mess.grouponly)
+ if (!isBotAdmins) return replay(mess.botadmin)
+ if (!isAdmins && !isCreator) return replay(mess.useradmin)
+ if (args[0] === "on") {
+ if (AntiVirtex) return replay('Already activated')
+ ntvirtex.push(from)
+ replay('Enabled antivirtex !')
+ var groupe = await Miku.groupMetadata(from)
+ var members = groupe['participants']
+ var mems = []
+ members.map(async adm => {
+ mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
+ })
+ Miku.sendMessage(from, {text: `\`\`\`「 Warning 」\`\`\`\n\nAntiVirtex System Activated!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+ } else if (args[0] === "off") {
+ if (!AntiVirtex) return replay('Already deactivated')
+ let off = ntvirtex.indexOf(from)
+ ntilinkall.splice(off, 1)
+ replay('Disabled antiVirtex !')
+ } else {
+   let buttonsntilink = [
+   { buttonId: `-antivirtex on`, buttonText: { displayText: 'On' }, type: 1 },
+   { buttonId: `-antivirtex off`, buttonText: { displayText: 'Off' }, type: 1 }
+   ]
+   await Miku.sendButtonText(m.chat, buttonsntilink, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.BotName}`, m)
+   }
+   }
+   break
 
    case 'antiwame': {
     if (isBan) return reply(mess.banned)	 			
@@ -5006,16 +5035,15 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
  
  *━━━〈  😻 Core 😻  〉━━━*
 
+❒✗ -alive *( bot working? )*
 ❒✗ -speak
 ❒✗ -${global.BotName} 
 ❒✗ -stalk
 ❒✗ -profile
 ❒✗ -help
-❒✗ -delete
 ❒✗ -listgc
 ❒✗ -listpc
 ❒✗ -support
-❒✗ -repo
 ❒✗ -script
 ❒✗ -botgroups 
 
@@ -5031,7 +5059,7 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 ❒✗ -block
 ❒✗ -unblock
 ❒✗ -broadcast
-❒✗ -Delete *( bot msg )*
+❒✗ -delete *( bot msg )*
  
  *━━━〈  🐦 Group 🐦  〉━━━*
  
@@ -5327,7 +5355,7 @@ k
 break
  
 
-case '':
+case 'alive':
     if(isCmd){
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
@@ -5338,7 +5366,7 @@ case '':
  const needhelpmenu = `Hey ${pushname} Baby 😚,\n\n❒✗ - *${global.BotName} is online❤️* ,\n🍓 Type *-help* for my full commands. `
      
          let butRun = [
-                {buttonId: `-owner`, buttonText: {displayText: 'Owner❤️'}, type: 1},
+                {buttonId: `-owner`, buttonText: {displayText: '❤️Owner❤️'}, type: 1},
                 {buttonId: `-Groupsettings`, buttonText: {displayText: 'Group settings⚙️'}, type: 1},
                 {buttonId: `-help`, buttonText: {displayText: 'Menu list 🍓'}, type: 1}
                 ]
@@ -5353,7 +5381,7 @@ case '':
                 }
 break
 
-case 'alive':
+case '':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 
@@ -5524,7 +5552,7 @@ default:
     if(isCmd){
         if (isBan) return reply(mess.banned)	 			
         if (isBanChat) return reply(mess.bangc)
-        reply (`*Dear Bot user ${pushname} baby💝* .\n\n*🎃 The Bot creater didn't programmed ${prefix + command}, So you can't use this command.* \nPlease type *-menu* to see my full commands.`)
+        reply (`*Dear Bot user ${pushname} baby💝* .\n\n*🎃 The Bot creater didn't programmed ${prefix + command}, So you can't use this command.* \n\nPlease type *-menu* to see my full commands.`)
 
     }	 			
 

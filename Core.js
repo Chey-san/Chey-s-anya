@@ -2000,7 +2000,7 @@ await Miku.sendMessage(m.chat, { delete: key })
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  let anu = await store.chats.all().filter(v => v.id.endsWith('@g.us')).map(v => v.id)
- let teks = ` 「  Miku's group user list  」\n\nTotal ${anu.length} users are using bot in Groups.`
+ let teks = `*MY GROUP USER LIST* 🤏🕶️🐤\n💝 Total *${anu.length}* users are using ${global.BotName} in there Groups.`
  for (let i of anu) {
   let metadata = await Miku.groupMetadata(i)
   if (metadata.owner === "undefined") {
@@ -2008,9 +2008,7 @@ await Miku.sendMessage(m.chat, { delete: key })
   } else {
   loldd = metadata.owner
   }
-  teks += `\n*MY GROUP USER LIST* 🤏🕶️🐤
-
-╭╼━━━━━᚜ 𝓤𝓼𝓮𝓻 𝓭𝓪𝓽𝓪 ᚛━━━━━╾╮
+  teks += `\n╭╼━━━━━᚜ 𝓤𝓼𝓮𝓻 𝓭𝓪𝓽𝓪 ᚛━━━━━╾╮
 ╽
 ❤️ *Name*  : ${metadata.subject ? metadata.subject : "undefined"}
 🥵 *Owner* : ${loldd ? '@' + loldd.split("@")[0] : "undefined"}
@@ -5044,9 +5042,10 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
  
  *━━━〈  😻 Core 😻  〉━━━*
 
-❒✗ -alive *( bot working? )*
+❒✗ -alive  *( bot working? )*
 ❒✗ -speak
 ❒✗ -${global.BotName} 
+❒✗ -calculator 
 ❒✗ -stalk
 ❒✗ -profile
 ❒✗ -help

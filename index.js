@@ -192,7 +192,7 @@ Miku.sendMessage(anu.id, buttonMessage)
 ╰╼━━━━━━━━━━━━━╾╯
 ╭╼━━᚜𝓖𝓻𝓸𝓾𝓹 𝓷𝓪𝓶𝓮 ᚛━━╾╮
 ╽
-🔥 *Group name* : *Bot testing*
+🔥 *Group name* : ${metadata.subject}
 ╰╼━━━━━━━━━━━━━╾╯
 
 🎃 *That was a nice time!*

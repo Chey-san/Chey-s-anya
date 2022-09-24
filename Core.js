@@ -218,7 +218,7 @@ for (let nexus of vien){
 	}
 	} 
 
-for (let nexus of autosticker){
+for (let nexus of setik){
     if (budy == nexus){
 	    result = fs.readFileSync(`./Anymedia/${nexus}.webp`)
 	    Miku.sendMessage(m.chat, { sticker: result, mimetype: 'sticker/webp' , ptt: true }, { quoted: m})

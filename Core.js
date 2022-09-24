@@ -4992,11 +4992,11 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 ╭╼━᚜ 𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪 ᚛━╾╮
 │                                      ❒
 🔥 *My prefix*       : ( - )
-🔥 *My name*       : ${global.BotName}
-🔥 *User name*    : ${pushname}
-🔥 *Owner name* : ${global.OwnerName}
-🔥 *Owner no.*     : http://wa.me//${global.Owner}
-🔥 *Group name*  : ${groupMetadata.subject}
+❤️ *My name*       : ${global.BotName}
+🥵 *User name*    : ${pushname}
+🎃 *Owner name* : ${global.OwnerName}
+😻 *Owner no.*     : http://wa.me//${global.Owner}
+🍓 *Group name*  : ${groupMetadata.subject}
 │                                      ❒
 ╰╼━━━━━━━━━━━━╾╯
 
@@ -5191,8 +5191,67 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 ❒✗ -anime
 ❒✗ -manga
 
- *━━━〈  🧮 Informative 🧮  〉━━━*
+ *━━━〈  ✨ Text Maker ✨  〉━━━*
 
+❒✗ -candy
+❒✗ -christmas
+❒✗ -3Dchristmas
+❒✗ -sparklechristmas
+❒✗ -deepsea
+❒✗ -scifi
+❒✗ -rainbow
+❒✗ -waterpipe
+❒✗ -spooky
+❒✗ -pencil
+❒✗ -circuit
+❒✗ -discovery
+❒✗ -metalic
+❒✗ -fiction
+❒✗ -demon
+❒✗ -transformar
+❒✗ -berry
+❒✗ -thunder 
+❒✗ -Magma
+❒✗ -3Dstone
+❒✗ -neonlight
+❒✗ -glitch
+❒✗ -harrypotter
+❒✗ -broken glass
+❒✗ -papercut
+❒✗ -watercolour
+❒✗ -multicolour
+❒✗ -neondevil
+❒✗ -underwater
+❒✗ -graffitibike
+❒✗ -snow
+❒✗ -cloud
+❒✗ -honey
+❒✗ -ice
+❒✗ -fruitjuice
+❒✗ -biscuit 
+❒✗ -wood
+❒✗ -chocolate
+❒✗ -strawberry
+❒✗ -matrix
+❒✗ -blood
+❒✗ -dropwater
+❒✗ -toxic
+❒✗ -lava
+❒✗ -rock
+❒✗ -bloodglas
+❒✗ -hallowen
+❒✗ -darkgold
+❒✗ -joker
+❒✗ -wicker
+❒✗ -firework
+❒✗ -skeleton
+❒✗ -blackpink
+❒✗ -sand
+❒✗ -glue
+❒✗ -1917
+
+ *━━━〈  🧮 Informative 🧮  〉
+k
 ❒✗ -animequote
 ❒✗ -quote
 ❒✗ -covid
@@ -5276,10 +5335,12 @@ case '':
       mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
     
         
- const needhelpmenu = `Hey ${pushname} darling 😚,\n *${global.BotName}* is online❤️, type *-help* for my full command's. `
+ const needhelpmenu = `Hey ${pushname} Baby 😚,\n\n❒✗ - *${global.BotName} is online❤️* ,\n🍓 Type *-help* for my full commands. `
      
          let butRun = [
-                {buttonId: `-help`, buttonText: {displayText: 'Help'}, type: 1}
+                {buttonId: `-owner`, buttonText: {displayText: 'Owner❤️'}, type: 1},
+                {buttonId: `-Groupsettings`, buttonText: {displayText: 'Group settings⚙️'}, type: 1},
+                {buttonId: `-help`, buttonText: {displayText: 'Menu list 🍓'}, type: 1}
                 ]
                 let buttonMessage = {
                     video:fs.readFileSync('./system/miku.mp4'),gifPlayback:true,
@@ -5296,7 +5357,7 @@ case 'alive':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 
-const txts = `Hey ${pushname} Darling❤️, \n I'm online.`
+const txts = `Hey ${pushname} Darling❤️, \nI'm online.`
 const mikuarray= [
             "https://c.tenor.com/hjL3MnIsB88AAAPo/marin-kitagawa-kitagawa-marin.mp4"           
             ]
@@ -5463,7 +5524,7 @@ default:
     if(isCmd){
         if (isBan) return reply(mess.banned)	 			
         if (isBanChat) return reply(mess.bangc)
-        reply (`No such command programmed *${pushname}* senpai! Type *${prefix}help* to get my full command list!`)
+        reply (`*Dear Bot user ${pushname} baby💝* .\n\n*🎃 The Bot creater didn't programmed ${prefix + command}, So you can't use this command.* \nPlease type *-menu* to see my full commands.`)
 
     }	 			
 

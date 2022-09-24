@@ -149,12 +149,29 @@ Miku.ev.on('group-participants.update', async (anu) => {
                 if (anu.action == 'add') {
                 let WAuserName = num
                 mikutext = `
-Hello @${WAuserName.split("@")[0]},
+ㅤㅤ🐦 *𝗪 𝗘 𝗟 𝗖 𝗢 𝗠 𝗘* ✋🏻
 
-I am *Anya*, Welcome to ${metadata.subject}.
+╭╼━━━᚜𝓤𝓼𝓮𝓻 𝓪𝓭𝓭𝓮𝓭 ᚛━━━╾╮
+╽
+❤️ *Member name* : @${WAuserName.split("@")[0]}
+✨ *Bio* : ${bioo}
+╰╼━━━━━━━━━━━━━━╾╯
+╭╼━━━᚜𝓖𝓻𝓸𝓾𝓹 𝓷𝓪𝓶𝓮 ᚛━━━╾╮
+╽
+🥵 *Group name* : ${metadata.subject}
+╰╼━━━━━━━━━━━━━━╾╯
+╭╼━━━᚜ 𝓖𝓻𝓸𝓾𝓹 𝓭𝓮𝓼𝓬. ᚛━━━╾╮
+╽
+🎃 *Group description* :
 
-*Group Description:*
 ${metadata.desc}
+╰╼━━━━━━━━━━━━━━╾╯
+╭╼━━━᚜ 𝓑𝓸𝓽 𝓭𝓮𝓽𝓪𝓲𝓵𝓼 ᚛━━━╾╮
+╽
+😻 *Bot name* : _${global.BotName}_
+╰╼━━━━━━━━━━━━━━╾╯
+
+Type *-help* to use this Bot 😚.
 `
 
     let buttonMessage = {
@@ -168,9 +185,18 @@ Miku.sendMessage(anu.id, buttonMessage)
                 } else if (anu.action == 'remove') {
                 	let WAuserName = num
                     mikutext = `
-Sayonara 👋, @${WAuserName.split("@")[0]},
+ㅤ      ㅤ🤏🏻 *𝗟 𝗘 𝗙 𝗧* 🐤
 
-I hope you will come back soon, but we are not going to miss you though!
+╭╼━━━᚜ 𝓤𝓼𝓮𝓻 𝓵𝓮𝓯𝓽  ᚛━━━╾╮
+╽
+🖤 *Member name* : @${WAuserName.split("@")[0]}
+╰╼━━━━━━━━━━━━━━╾╯
+╭╼━━━᚜𝓖𝓻𝓸𝓾𝓹 𝓷𝓪𝓶𝓮 ᚛━━━╾╮
+╽
+🔥 *Group name* : ${metadata.subject}
+╰╼━━━━━━━━━━━━━━╾╯
+
+Type *-help* to use this Bot 😚.
 `
 
     let buttonMessage = {

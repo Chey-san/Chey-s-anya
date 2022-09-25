@@ -5428,7 +5428,13 @@ const Nexusarray= [
 
 break
 
-
+case 'bts':
+if (isBan) return reply(mess.ban)
+	if (isBanChat) return reply(mess.banChat)
+teks = `Here you go!`
+buffer = `https://api.dapuhy.xyz/api/randomimage/batues?apikey=0gly81wDky`
+Miku.sendMessage(from, {image:{url:buffer}, caption:"Here it is💙 !"}, {quoted:m})
+break
 
 case 'add':{     			
     if (!m.isGroup) return replay(mess.grouponly)

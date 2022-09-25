@@ -195,6 +195,7 @@ const AntiLinkTelegram = m.isGroup ? ntilinktg.includes(from) : false
 const AntiLinkTwitter = m.isGroup ? ntilinktwt.includes(from) : false
 const AntiLinkAll = m.isGroup ? ntilinkall.includes(from) : false
 const antiWame = m.isGroup ? ntwame.includes(from) : false
+const antiToxic = m.isGroup ? nttoxic.includes(from) : false
 const antiVirtex = m.isGroup ? ntvirtex.includes(from) : false
 const AntiNsfw = m.isGroup ? ntnsfw.includes(from) : false
 const isLeveling = m.isGroup ? _leveling.includes(from) : false

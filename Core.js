@@ -4941,7 +4941,7 @@ reply(mess.waiting)
     ]
         let button4Messagess = {
         image: {url:waifuddd.data.url},
-        caption: '🎃 I got your waifu ${pushname} .\n\n🥵 _But be careful because_ ,\n\n_More than one waifu will definitely ruin your Laifu!_❤️',
+        caption: '😳 *I got your waifu baby* .\n\n🥵 _But be careful because_ ,\n\n_More than one waifu will definitely ruin your Laifu!_❤️',
         buttons: wbuttsssr,
         headerType: 4
          }     

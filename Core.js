@@ -1669,7 +1669,7 @@ if (isBan) return reply(mess.banned)
 if (isBanChat) return reply(mess.bangc)
 				   let cok = await fetchJson(`http://api.lolhuman.xyz/api/random/quotesimage?apikey=${lolkey}`)
 				   reply(mess.waiting)
-				  Miku.sendMessage(m.chat, { image: { url: cok }, caption: 'Here it is...' }, { quoted: m })
+				  Miku.sendMessage(m.chat, { image: { url: cok }, caption: '🎃 *Here is your Quote ${pushname}* .' }, { quoted: m })
 				  break
 
 case 'quotesanime': case 'quoteanime': case 'animequote': case 'animequotes':{
@@ -3087,7 +3087,7 @@ case 'tomp4': case 'tovideo': {
  let { webp2mp4File } = require('./lib/uploader')
  let media = await Miku.downloadAndSaveMediaMessage(quoted)
  let webpToMp4 = await webp2mp4File(media)
- await Miku.sendMessage(m.chat, { video: { url: webpToMp4.result, caption: 'Here it is...' } }, { quoted: m })
+ await Miku.sendMessage(m.chat, { video: { url: webpToMp4.result, caption: '🎃 *Here is your mp4 ${pushname}* .' } }, { quoted: m })
  await fs.unlinkSync(media)
  }
  break
@@ -4259,7 +4259,7 @@ reply(mess.waiting)
     ]
   let button2Messages = {
    image: {url:waifudd.data.url},
-   caption:  `Here it is...`,
+   caption:   `🥵 *Here is your trap ${pushname}*`,
   buttons: trapbot,
   headerType: 1
   }     
@@ -4304,7 +4304,7 @@ reply(mess.waiting)
     ]
   let button4Messages = {
    image: {url:waifudd.data.url},
-   caption:  `Here it is...`,
+   caption:  `🤤 *I got your hentai waifu ${pushname}* ❤️`,
   buttons: nwaifubot,
   headerType: 1
   }      
@@ -4941,7 +4941,7 @@ reply(mess.waiting)
     ]
         let button4Messagess = {
         image: {url:waifuddd.data.url},
-        caption: 'More than one waifu will definitely ruin your Laifu!',
+        caption: '🎃 *I got your waifu ${pushname}*.\n\n🥵 *But be careful because* ,\n*More than one waifu will definitely ruin your Laifu!❤️*',
         buttons: wbuttsssr,
         headerType: 4
          }     
@@ -5191,6 +5191,7 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 ❒✗ -togif
 ❒✗ -steal
 ❒✗ -stickermeme
+❒✗ -emoji
 ❒✗ -emojimix
 ❒✗ -tourl
 ❒✗ -tomp3
@@ -5345,8 +5346,9 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 ❒✗ -glue
 ❒✗ -1917
 
- *━━━〈  🧮 Informative 🧮  〉
-k
+ *━━━〈  🧮 Informative 🧮  〉━━━*
+
+❒✗ -quotesimagexxx
 ❒✗ -animequote
 ❒✗ -quote
 ❒✗ -covid

@@ -1761,7 +1761,7 @@ let sections = []
 
 
   case 'grupsetting':
-            case 'groupsetting':{
+            case 'groupsettings':{
             	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
                     let sections = []
@@ -1792,7 +1792,7 @@ if (isBanChat) return reply(mess.banChat)
       from, 
       {
        text: "Group Settings",
-       footer: botname,
+       footer: ${pushname},
        title: "Set your group settings here......",
        buttonText: "Click Button",
        sections

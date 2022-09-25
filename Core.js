@@ -1482,9 +1482,7 @@ replay('This Group has been *unbanned* from using me!')
 } else {
   let buttonsntnsfw = [
   { buttonId: `-bangroup on`, buttonText: { displayText: 'Ban' }, type: 1 },
-  { buttonId: `-bangroup off`, buttonText: { displayText: 'Unban' }, type: 1 },
-  { buttonId: `-owner`, buttonText: { displayText: 'Ban' }, type: 1 },
-  { buttonId: `-me`, buttonText: { displayText: 'Unban' }, type: 1 }
+  { buttonId: `-bangroup off`, buttonText: { displayText: 'Unban' }, type: 1 }
   ]
   await Miku.sendButtonText(m.chat, buttonsntnsfw, `Please choose any Button below.\n\n *On / Off*`, `${global.BotName }`, m)
   }
@@ -5384,7 +5382,10 @@ case 'alive':
          let butRun = [
                 {buttonId: `-owner`, buttonText: {displayText: '❤️Owner❤️'}, type: 1},
                 {buttonId: `-Groupsettings`, buttonText: {displayText: 'Group settings⚙️'}, type: 1},
-                {buttonId: `-help`, buttonText: {displayText: 'Menu list 🍓'}, type: 1}
+                ]
+         let buttonsntnsfw = [
+                { buttonId: `-bangroup on`, buttonText: { displayText: 'Ban' }, type: 1 },
+                { buttonId: `-bangroup off`, buttonText: { displayText: 'Unban' }, type: 1 }
                 ]
                 let buttonMessage = {
                     video:fs.readFileSync('./system/miku.mp4'),gifPlayback:true,

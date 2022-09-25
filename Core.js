@@ -4924,7 +4924,9 @@ case 'loli' :
 reply(mess.waiting)	
     waifuddd = await axios.get('https://waifu.pics/api/sfw/shinobu')
  var wbuttsssr = [
-    {buttonId: `-loli`, buttonText: {displayText: `>>`}, type: 1},
+    {buttonId: `-loli`, buttonText: {displayText: `One more loli 🔥`}, type: 1},
+    {buttonId: `-menu`, buttonText: {displayText: `Menu 🍓`}, type: 1},
+    {buttonId: `-nsfw`, buttonText: {displayText: `NSFW 🥵`}, type: 1}
     ]
         let buttonMessagessfgr = {
         image: {url:waifuddd.data.url},
@@ -5428,13 +5430,6 @@ const Nexusarray= [
 
 break
 
-case 'bts':
-if (isBan) return reply(mess.ban)
-	if (isBanChat) return reply(mess.banChat)
-teks = `Here you go!`
-buffer = `https://api.dapuhy.xyz/api/randomimage/batues?apikey=0gly81wDky`
-Miku.sendMessage(from, {image:{url:buffer}, caption:"Here it is💙 !"}, {quoted:m})
-break
 
 case 'add':{     			
     if (!m.isGroup) return replay(mess.grouponly)

@@ -1792,7 +1792,7 @@ if (isBanChat) return reply(mess.banChat)
       from, 
       {
        text: "Group Settings",
-       footer: ${pushname},
+       footer: `${BotName}`,
        title: "Set your group settings here......",
        buttonText: "Click Button",
        sections

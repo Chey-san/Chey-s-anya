@@ -67,7 +67,7 @@ const {
 
 let banUser = JSON.parse(fs.readFileSync('./database/banUser.json'));
 let banchat = JSON.parse(fs.readFileSync('./database/banChat.json'));
-let bad = JSON.parse(fs.readFileSync('./src/toxic/bad.json'));
+let bad = JSON.parse(fs.readFileSync('./src/Toxic/bad.json'));
 
  let _limit = JSON.parse(fs.readFileSync('./storage/user/limit.json'));
  let _buruan = JSON.parse(fs.readFileSync('./storage/user/bounty.json'));

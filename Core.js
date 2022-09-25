@@ -1391,7 +1391,9 @@ switch(command) {
     if (isBanChat) return reply(mess.bangc)
     teks = `*${global.BotName}'s Script*\n\n*GitHub*: ${global.BotSourceCode}\n\nDont forget to follow me on *GitHub* and give a ⭐️ to my projects. `
     let buttons = [
-    {buttonId: `-menu`, buttonText: {displayText: '✨Bot Menu✨'}, type: 1}
+    {buttonId: `-owner`, buttonText: {displayText: `❤️𝘖𝘸𝘯𝘦𝘳❤️`}, type: 1},
+    {buttonId: `-groupsettings`, buttonText: {displayText: `𝘎𝘳𝘰𝘶𝘱 𝘴𝘦𝘵𝘵𝘪𝘯𝘨𝘴⚙️`}, type: 1},
+    {buttonId: `-menu`, buttonText: {displayText: `𝘔𝘦𝘯𝘶 🍓`}, type: 1}
     ]
     let buttonMessage = {
     image: Thumb,
@@ -1442,7 +1444,9 @@ case 'me': case 'profile': case 'p':
 
 
 let buttonspro = [
-    {buttonId: `-soulmate`, buttonText: {displayText: 'Your Soulmate'}, type: 1}
+    {buttonId: `-soulmate`, buttonText: {displayText: `𝘔𝘺 𝘴𝘰𝘶𝘭𝘮𝘢𝘵𝘦 😚`}, type: 1},
+    {buttonId: `-menu`, buttonText: {displayText: `𝘔𝘦𝘯𝘶 🍓`}, type: 1},
+    {buttonId: `-alive`, buttonText: {displayText: `𝘝𝘰𝘪𝘤𝘦𝘴 👻`}, type: 1}
     ]
             let buttonMessage = {
                 image: { url: pfp },
@@ -1478,7 +1482,9 @@ replay('This Group has been *unbanned* from using me!')
 } else {
   let buttonsntnsfw = [
   { buttonId: `-bangroup on`, buttonText: { displayText: 'Ban' }, type: 1 },
-  { buttonId: `-bangroup off`, buttonText: { displayText: 'Unban' }, type: 1 }
+  { buttonId: `-bangroup off`, buttonText: { displayText: 'Unban' }, type: 1 },
+  { buttonId: `-owner`, buttonText: { displayText: 'Ban' }, type: 1 },
+  { buttonId: `-me`, buttonText: { displayText: 'Unban' }, type: 1 }
   ]
   await Miku.sendButtonText(m.chat, buttonsntnsfw, `Please choose any Button below.\n\n *On / Off*`, `${global.BotName }`, m)
   }
@@ -4924,9 +4930,9 @@ case 'loli' :
 reply(mess.waiting)	
     waifuddd = await axios.get('https://waifu.pics/api/sfw/shinobu')
  var wbuttsssr = [
-    {buttonId: `-loli`, buttonText: {displayText: `One more loli 🔥`}, type: 1},
-    {buttonId: `-menu`, buttonText: {displayText: `Menu 🍓`}, type: 1},
-    {buttonId: `-nsfw`, buttonText: {displayText: `NSFW 🥵`}, type: 1}
+    {buttonId: `-loli`, buttonText: {displayText: `𝘖𝘯𝘦 𝘮𝘰𝘳𝘦 𝘓𝘰𝘭𝘪❤️`}, type: 1},
+    {buttonId: `-menu`, buttonText: {displayText: `𝘔𝘦𝘯𝘶 🍓`}, type: 1},
+    {buttonId: `-nsfw`, buttonText: {displayText: `𝘕𝘚𝘞𝘍 🥵`}, type: 1}
     ]
         let buttonMessagessfgr = {
         image: {url:waifuddd.data.url},

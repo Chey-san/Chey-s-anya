@@ -784,14 +784,29 @@ Miku.sendMessage(from, {text:`\`\`\`「 'wa.me' PM link Detected! 」\`\`\`\n\n@
 } else {
 }
 
-if (antiVirtex) {
-    if (budy.length > 3500) {
-    reply(`*Caution!*\n\n`.repeat(300))
-    reply(`\`\`\`Virus Detected !!\`\`\`\n\nRevoving sender...`)
-    if (!isBotAdmins) return reply(mess.botAdmin)
-    Miku.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-    }
-    }
+  if (antiVirtex) {
+  if (budy.length > 3500) {
+  reply(`Somebody spammed virus!! Mark as read⚠️\n`.repeat(300))
+  reply(`\`\`\`「 Virus Detected 」\`\`\`\n\nSorry You Will Be Kicked !`)
+  if (!isBotAdmins) return reply(mess.botAdmin)
+  Miku.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
+  }
+  }
+
+  if (antiToxic)
+  if (bad.includes(messagesD)) {
+  tos = ['Hey, watch your mouth','Never been taught how to speak?','Stop being toxic my friend🤢','Dont be toxic 🙂']
+  sin =  tos[Math.floor(Math.random() * (tos.length))]
+  reply(sin)
+  if (m.text) {
+  bvl = `\`\`\`「 Bad Word Detected 」\`\`\`\n\nYou are using bad word but you are an admin that's why i won't kick you😇`
+  if (isAdmins) return reply(bvl)
+  if (m.key.fromMe) return reply(bvl)
+  if (isCreator) return reply(bvl)
+  kice = m.sender
+  await Miku.groupParticipantsUpdate(m.chat, [kice], 'remove')
+  Miku.sendMessage(from, {text:`\`\`\`「 Bad Word Detected 」\`\`\`\n\n@${kice.split("@")[0]} was kicked because of using bad words in this group`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})}
+  }
 
 
     if (AntiLink) {
@@ -1743,46 +1758,46 @@ let sections = []
   break
 
 
-  case 'groupsetting':
-    case 'groupsettings':{
-        if (isBan) return reply(mess.banned)	 			
-if (isBanChat) return reply(mess.bangc)
-            let sections = []
-            let com = [`group open`,`leveling on`,`antilinkgc on`,`antilinktg on`,`antilinktt on`,`antilinkytch on`,`antilinkytvid on`,`antilinkig on`,`antilinkfb on`,`antilinktwit on`,`antilinkall on`,`antiwame on`]
-            let comm = [`group close`,`leveling off`,`antilinkgc off`,`antilinktg off`,`antilinktt off`,`antilinkytch off`,`antilinkytvid off`,`antilinkig on`,`antilinkfb off`,`antilinktwit off`,`antilinkall off`,`antiwame off`]
-            let listnya = [`Group open/close`,`Leveling on/off`,`Antilink Group on/off`,`Antilink Telegram on/off`,`Antilink Tiktok on/off`,`Antilink Youtube Channel on/off`,`Antilink Youtube Video on/off`,`Antilink Instagram on/off`,`Antilink Facebook on/off`,`Antilink Twitter on/off`,`Antilink All on/off`,`Anti Wame on/off`]
-            let suruh = [`Enable`, `Disable`]
-            let fiturname = [`Group`,`Leveling`,`Auto Sticker`,`Antilink Group`,`Antilink Telegram`,`Antilink Tiktok`,`Antilink Youtube Channel`,`Antilink Youtube Video`,`Antilink Instagram`,`Antilink Facebook`,`Antilink Twitter`,`Antilink All`,`Anti Wame`,`Auto Revoke`]
-            let startnum = 0; let startnu = 0; let startn = 0;let start = 0
-            let startnumm = 1
-            for (let x of com) {
-                const yy = {title: `${listnya[startnum++]}`,
-            rows: [
-               {
-                title: `${suruh[0]}`,
-                description: `Activate ${fiturname[startnu++]}`,
-                rowId: `${prefix}${x}`
-              },{
-                title: `${suruh[1]}`,
-                description: `Deactivate ${fiturname[startn++]}`,
-                rowId: `${prefix}${comm[start++]}`
-              }
-            ]
-           }
-                sections.push(yy)
-            }
-            const sendm =  Miku.sendMessage(
-from, 
-{
-text: " Shortcuts for your group setting... ",
-footer: BotName,
-title: " *Group Settings* ",
-buttonText: "Tap here❤️",
-sections
-}, { quoted : m }
-)  
+  case 'grupsetting':
+            case 'groupsetting':{
+            	if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+                    let sections = []
+                    let com = [`group open`,`leveling on`,`autosticker on`,`welcome on`,`antilinkgc on`,`antilinktg on`,`antilinktt on`,`antilinkytch on`,`antilinkytvid on`,`antilinkig on`,`antilinkfb on`,`antilinktwit on`,`antilinkall on`,`antiwame on`,`antitoxic on`,`antivirus on`,`autorevoke on`,`autoreply on`]
+                    let comm = [`group close`,`leveling off`,`autosticker off`,`welcome off`,`antilinkgc off`,`antilinktg on`,`antilinktt on`,`antilinkytch on`,`antilinkytvid on`,`antilinkig on`,`antilinkfb on`,`antilinktwit on`,`antilinkall on`,`antiwame on`,`antitoxic on`,`antivirus on`,`autorevoke on`,`autoreply on`]
+                    let listnya = [`Group open/close`,`Leveling on/off`,`Auto-Sticker on/off`,`Welcome/Left on/off`,`Antilink Group on/off`,`Antilink Telegram on/off`,`Antilink Tiktok on/off`,`Antilink Youtube Channel on/off`,`Antilink Youtube Video on/off`,`Antilink Instagram on/off`,`Antilink Facebook on/off`,`Antilink Twitter on/off`,`Antilink All on/off`,`Anti Wame on/off`,`Anti Toxic on/off`,`Anti Virus on/off`,`Auto Revoke on/off`,`Auto Reply on/off`]
+                    let suruh = [`Enable`, `Disable`]
+                    let fiturname = [`Group`,`Leveling`,`Auto Sticker`,`Welcome`,`Antilink Group`,`Antilink Telegram`,`Antilink Tiktok`,`Antilink Youtube Channel`,`Antilink Youtube Video`,`Antilink Instagram`,`Antilink Facebook`,`Antilink Twitter`,`Antilink All`,`Anti Wame`,`Anti Toxic`,`Anti Virus`,`Auto Revoke`,`Auto Reply`]
+                    let startnum = 0; let startnu = 0; let startn = 0;let start = 0
+                    let startnumm = 1
+                    for (let x of com) {
+                        const yy = {title: `${listnya[startnum++]}`,
+                    rows: [
+                       {
+                        title: `${suruh[0]}`,
+                        description: `Activate ${fiturname[startnu++]}`,
+                        rowId: `${prefix}${x}`
+                      },{
+                        title: `${suruh[1]}`,
+                        description: `Deactivate ${fiturname[startn++]}`,
+                        rowId: `${prefix}${comm[start++]}`
+                      }
+                    ]
+                   }
+                        sections.push(yy)
+                    }
+                    const sendm =  Miku.sendMessage(
+      from, 
+      {
+       text: "Group Settings",
+       footer: botname,
+       title: "Set your group settings here......",
+       buttonText: "Click Button",
+       sections
+      }, { quoted : m }
+    )  
 }
-break
+  break
 
 /* case 'command': {
       if (isBan) return reply(mess.banned)	 			
@@ -5361,6 +5376,9 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 ❒✗ -sand
 ❒✗ -glue
 ❒✗ -1917
+❒✗ -pornhub
+❒✗ -retro
+❒✗ -horror
 
  *━━━〈  🧮 Informative 🧮  〉━━━*
 
@@ -5584,6 +5602,9 @@ case 'lava': case 'rock': case 'bloodglas': case 'hallowen': case 'darkgold': ca
              if (/sand/.test(command)) link = 'https://textpro.me/write-in-sand-summer-beach-free-online-991.html'
              if (/glue/.test(command)) link = 'https://textpro.me/create-3d-glue-text-effect-with-realistic-style-986.html'
              if (/1917/.test(command)) link = 'https://textpro.me/1917-style-text-effect-online-980.html'
+             if (/pornhub/.test(command)) link = 'https://textpro.me/pornhub-style-logo-online-generator-free-977.html'   
+             if (/horror/.test(command)) link = 'https://textpro.me/create-a-cinematic-horror-text-effect-1045.html'
+             if (/retro/.test(command)) link = 'https://textpro.me/create-3d-retro-text-effect-online-free-1065.html'                              
                 if (/leaves/.test(command)) link = 'https://textpro.me/natural-leaves-text-effect-931.html'
              let anu = await maker.textpro(link, q)
                 Miku.sendMessage(m.chat, { image: { url: anu }, caption: `Made by ${global.botname},For my Darling ` }, { quoted: m })

@@ -5380,12 +5380,9 @@ case 'alive':
  const needhelpmenu = `Hey ${pushname} Baby 😚,\n\n❒✗ - *${global.BotName} is online❤️* ,\n\n🍓 Type *-help* for my full commands. `
      
          let butRun = [
-                {buttonId: `-owner`, buttonText: {displayText: '❤️Owner❤️'}, type: 1},
-                {buttonId: `-Groupsettings`, buttonText: {displayText: 'Group settings⚙️'}, type: 1},
-                ]
-         let buttonsntnsfw = [
-                { buttonId: `-bangroup on`, buttonText: { displayText: 'Ban' }, type: 1 },
-                { buttonId: `-bangroup off`, buttonText: { displayText: 'Unban' }, type: 1 }
+                {buttonId: `-owner`, buttonText: {displayText: '❤️𝘖𝘸𝘯𝘦𝘳❤️'}, type: 1},
+                {buttonId: `-me`, buttonText: {displayText: '𝘈𝘣𝘰𝘶𝘵 _${pushname}_'}, type: 1},      
+                {buttonId: `-menu`, buttonText: {displayText: '𝘔𝘦𝘯𝘶 🍓'}, type: 1}
                 ]
                 let buttonMessage = {
                     video:fs.readFileSync('./system/miku.mp4'),gifPlayback:true,

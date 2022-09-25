@@ -219,11 +219,27 @@ for (let nexus of vien){
 	} 
 
 for (let nexus of setik){
-    if (budy == nexus){
+    if (budy === nexus){
 	    result = fs.readFileSync(`./Anymedia/${nexus}.webp`)
-	    Miku.sendMessage(m.chat, { sticker: result, mimetype: 'sticker/webp' , ptt: true }, { quoted: m})
+            Miku.sendMessage(m.chat, { sticker: result }, { quoted: m })
+  	}						 
 	}
-	} 	
+
+//if (Autoreply) //remove forwad slashes to make it autoreply on off
+for (let nexus of imagi){
+    if (budy === nexus){
+ 	    result = fs.readFileSync(`./Anymedia/${nexus}.jpg`)
+	    Miku.sendMessage(m.chat, { image: result }, { quoted: m })
+	}
+	}
+
+//if (Autoreply) //remove forwad slashes to make it autoreply on off
+for (let nexus of videox){
+    if (budy === nexus){
+	    result = fs.readFileSync(`./Anymedia/${nexus}.mp4`)
+	    Miku.sendMessage(m.chat, { video: result }, { quoted: m })
+	}
+        } 	
 /////////////////////////////////////////
 /////////// -  DM chatbot (Delete this part to turn off DM Chat Bot) - //////////////////
 

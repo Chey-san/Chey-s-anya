@@ -5159,7 +5159,7 @@ replay('Broadcast Sent !')
 break    
 
 
-case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
+case 'allmenu': case 'h':{
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
       
@@ -5530,7 +5530,7 @@ case 'alive':
                 }
 break
 
-case 'textpro':
+case 'groupmenu':
     if(isCmd){
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
@@ -5538,16 +5538,151 @@ case 'textpro':
       mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
     
         
- const needhelpmenu = `Hey ${pushname} Baby 😚,\n\n❒✗ - *${global.BotName} is online❤️* ,\n\n🍓 Type *-help* for my full commands. `
+ const needhelpmenu = `╭╼━᚜ 𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪 ᚛━╾╮
+│                                      ❒
+🔥 *My prefix*       : ( - )
+❤️ *My name*       : ${global.BotName}
+🥵 *User name*    : ${pushname}
+🎃 *Owner name* : ${global.OwnerName}
+😻 *Owner no.*     : http://wa.me//${global.Owner}
+🍓 *Group name*  : ${groupMetadata.subject}
+│                                      ❒
+╰╼━━━━━━━━━━━━╾╯
+
+╭╼━᚜ 𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪 ᚛━╾╮
+╽                                     🎃
+┃
+❒✗ -deletethis  *( any msg )*
+❒✗ -promote
+❒✗ -demote
+❒✗ -revoke
+❒✗ -add
+❒✗ -remove
+❒✗ -tagall
+❒✗ -hidetag
+❒✗ -afk  *( type reason )*
+❒✗ -grouplink
+❒✗ -setgcpp
+❒✗ -setname
+❒✗ -setdesc
+❒✗ -group  *( open/close )*
+❒✗ -antivirus
+❒✗ -antitoxic
+╿                                     
+╰╼⟨ ${pushname} ⟩╾⟢ `
      
          let butRun = [
                 {buttonId: `-owner`, buttonText: {displayText: '❤️ 𝘖𝘸𝘯𝘦𝘳 ❤️'}, type: 1},
-                {buttonId: `-me`, buttonText: {displayText: '𝘈𝘣𝘰𝘶𝘵 𝘵𝘩𝘪𝘴 𝘶𝘴𝘦𝘳 🥵'}, type: 1},      
+                {buttonId: `-funmenu`, buttonText: {displayText: 'Fun menu 😂'}, type: 1},      
                 {buttonId: `-menu`, buttonText: {displayText: '🍓 𝘔𝘦𝘯𝘶 🍓'}, type: 1}
                 ]
                 let buttonMessage = {
                     video:fs.readFileSync('./system/miku10.mp4'),gifPlayback:true,
                     caption: needhelpmenu,
+                    footer: `${global.BotName}`,
+                    buttons: butRun,
+                    headerType: 4
+                }
+            Miku.sendMessage(m.chat,buttonMessage,{quoted:m})
+                }
+break
+
+case 'ownermenu':
+    if(isCmd){
+    if (isBan) return reply(mess.banned)	 			
+    if (isBanChat) return reply(mess.bangc)
+
+      mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
+    
+        
+ const txt = `╭╼━᚜ 𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪 ᚛━╾╮
+│                                      ❒
+🔥 *My prefix*       : ( - )
+❤️ *My name*       : ${global.BotName}
+🥵 *User name*    : ${pushname}
+🎃 *Owner name* : ${global.OwnerName}
+😻 *Owner no.*     : http://wa.me//${global.Owner}
+🍓 *Group name*  : ${groupMetadata.subject}
+│                                      ❒
+╰╼━━━━━━━━━━━━╾╯
+
+╭╼━᚜ 𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪 ᚛━╾╮
+╽                                     🎃
+┃
+❒✗ -alive  *( bot working? )*
+❒✗ -speak
+❒✗ -${global.BotName} 
+❒✗ -calculator 
+❒✗ -stalk
+❒✗ -profile
+❒✗ -help
+❒✗ -listgc
+❒✗ -listpc
+❒✗ -support
+❒✗ -script
+❒✗ -botgroups 
+╿                                     
+╰╼⟨ ${pushname} ⟩╾⟢ `
+     
+         let butRun = [
+                {buttonId: `-owner`, buttonText: {displayText: '❤️ 𝘖𝘸𝘯𝘦𝘳 ❤️'}, type: 1},
+                {buttonId: `-animemenu`, buttonText: {displayText: 'Anime menu 🥵'}, type: 1},      
+                {buttonId: `-menu`, buttonText: {displayText: '🍓 𝘔𝘦𝘯𝘶 🍓'}, type: 1}
+                ]
+                let buttonMessage = {
+                    video:fs.readFileSync('./system/owner.jpg'),gifPlayback:true,
+                    caption: txt,
+                    footer: `${global.BotName}`,
+                    buttons: butRun,
+                    headerType: 4
+                }
+            Miku.sendMessage(m.chat,buttonMessage,{quoted:m})
+                }
+break
+
+case 'antilinkmenu':
+    if(isCmd){
+    if (isBan) return reply(mess.banned)	 			
+    if (isBanChat) return reply(mess.bangc)
+
+      mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
+    
+        
+ const txt = `╭╼━᚜ 𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪 ᚛━╾╮
+│                                      ❒
+🔥 *My prefix*       : ( - )
+❤️ *My name*       : ${global.BotName}
+🥵 *User name*    : ${pushname}
+🎃 *Owner name* : ${global.OwnerName}
+😻 *Owner no.*     : http://wa.me//${global.Owner}
+🍓 *Group name*  : ${groupMetadata.subject}
+│                                      ❒
+╰╼━━━━━━━━━━━━╾╯
+
+╭╼━᚜ 𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪 ᚛━╾╮
+╽                                     🎃
+┃
+❒✗ -antilinkgc
+❒✗ -antilinktg
+❒✗ -antilinktt
+❒✗ -antilinkytch
+❒✗ -antilinkytvid
+❒✗ -antilinkig
+❒✗ -antilinkfb
+❒✗ -antilinktwit
+❒✗ -antilinkall
+❒✗ -antiwame
+╿                                     
+╰╼⟨ ${pushname} ⟩╾⟢ `
+     
+         let butRun = [
+                {buttonId: `-owner`, buttonText: {displayText: '❤️ 𝘖𝘸𝘯𝘦𝘳 ❤️'}, type: 1},
+                {buttonId: `-funmenu`, buttonText: {displayText: 'Fun menu 😂'}, type: 1},      
+                {buttonId: `-menu`, buttonText: {displayText: '🍓 𝘔𝘦𝘯𝘶 🍓'}, type: 1}
+                ]
+                let buttonMessage = {
+                    video:fs.readFileSync('./system/Antilink.jpg'),gifPlayback:true,
+                    caption: txt,
                     footer: `${global.BotName}`,
                     buttons: butRun,
                     headerType: 4

@@ -2427,17 +2427,17 @@ await Miku.sendMessage(m.chat, { delete: key })
    }
    break
 
-   case 'antivirus': case 'antivirtex': {
-   if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-if (!m.isGroup) return replay(mess.group)
-if (!isBotAdmins) return replay(mess.botAdmin)
-if (!isAdmins && !isCreator) return replay(mess.admin)
+   case'antivirus': case 'antivirtex': {
+if (isBan) return reply(mess.banned)	 			
+if (isBanChat) return reply(mess.bangc)
+if (!m.isGroup) return replay(mess.grouponly)
+if (!isBotAdmins) return replay(mess.botadmin)
+if (!isAdmins && !isCreator) return replay(mess.useradmin)
 if (args[0] === "on") {
 if (antiVirtex) return replay('Already activated')
 ntvirtex.push(from)
 replay('Success in turning on antivirus in this group')
-var groupe = await Miku.groupMetadata(from)
+var groupe = await Nexus.groupMetadata(from)
 var members = groupe['participants']
 var mems = []
 members.map(async adm => {
@@ -2451,19 +2451,20 @@ ntvirtex.splice(off, 1)
 replay('Success in turning off antivirus this group')
 } else {
   let buttonsntvirtex = [
-  { buttonId: `${command} on`, buttonText: { displayText: 'On' }, type: 1 },
-  { buttonId: `${command} off`, buttonText: { displayText: 'Off' }, type: 1 }
+  { buttonId: `${prefix}antivirtex on`, buttonText: { displayText: 'On' }, type: 1 },
+  { buttonId: `${prefix}antivritex off`, buttonText: { displayText: 'Off' }, type: 1 }
   ]
-  await Miku.sendButtonText(m.chat, buttonsntvirtex, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.botname}`, m)
+  await Nexus.sendButtonText(m.chat, buttonsntvirtex, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.BotName}`, m)
   }
   }
   break
-case 'antitoxic': {
-   if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-if (!m.isGroup) return replay(mess.group)
-if (!isBotAdmins) return replay(mess.botAdmin)
-if (!isAdmins && !isCreator) return replay(mess.admin)
+
+case'antitoxic': {
+if (isBan) return reply(mess.banned)	 			
+if (isBanChat) return reply(mess.bangc)
+if (!m.isGroup) return replay(mess.grouponly)
+if (!isBotAdmins) return replay(mess.botadmin)
+if (!isAdmins && !isCreator) return replay(mess.useradmin)
 if (args[0] === "on") {
 if (antiToxic) return replay('Already activated')
 nttoxic.push(from)
@@ -2482,10 +2483,10 @@ nttoxic.splice(off, 1)
 replay('Success in turning off antitoxic in this group')
 } else {
   let buttonsnttoxci = [
-  { buttonId: `${command} on`, buttonText: { displayText: 'On' }, type: 1 },
-  { buttonId: `${command} off`, buttonText: { displayText: 'Off' }, type: 1 }
-  ]
-  await Miku.sendButtonText(m.chat, buttonsnttoxic, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.botname}`, m)
+  { buttonId: `${prefix}antitoxic on`, buttonText: { displayText: 'On' }, type: 1 },
+  { buttonId: `${prefix}antitoxic off`, buttonText: { displayText: 'Off' }, type: 1 }
+   ]
+  await Nexus.sendButtonText(m.chat, buttonsnttoxci, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.BotName}`, m)
   }
   }
   break

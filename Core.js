@@ -5512,7 +5512,7 @@ case 'alive':
       mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
     
         
- const needhelpmenu = `Hey ${pushname} Baby 😚,\n\n❒✗ - *${global.BotName} is online❤️* ,\n\n🍓 Type *-help* for my full commands. `
+ const txt = `Hey ${pushname} Baby 😚,\n\n❒✗ - *${global.BotName} is online❤️* ,\n\n🍓 Type *-help* for my full commands. `
      
          let butRun = [
                 {buttonId: `-owner`, buttonText: {displayText: '❤️ 𝘖𝘸𝘯𝘦𝘳 ❤️'}, type: 1},
@@ -5521,7 +5521,7 @@ case 'alive':
                 ]
                 let buttonMessage = {
                     video:fs.readFileSync('./system/miku.mp4'),gifPlayback:true,
-                    caption: needhelpmenu,
+                    caption: txt,
                     footer: `${global.BotName}`,
                     buttons: butRun,
                     headerType: 4
@@ -5538,7 +5538,7 @@ case 'textpro':
       mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
     
         
- const textpropmenu = `Hey ${pushname} Baby 😚,\n\n❒✗ - *${global.BotName} is online❤️* ,\n\n🍓 Type *-help* for my full commands. `
+ const needhelpmenu = `Hey ${pushname} Baby 😚,\n\n❒✗ - *${global.BotName} is online❤️* ,\n\n🍓 Type *-help* for my full commands. `
      
          let butRun = [
                 {buttonId: `-owner`, buttonText: {displayText: '❤️ 𝘖𝘸𝘯𝘦𝘳 ❤️'}, type: 1},
@@ -5547,7 +5547,7 @@ case 'textpro':
                 ]
                 let buttonMessage = {
                     video:fs.readFileSync('./system/miku10.mp4'),gifPlayback:true,
-                    caption: textpromenu,
+                    caption: needhelpmenu,
                     footer: `${global.BotName}`,
                     buttons: butRun,
                     headerType: 4

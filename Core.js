@@ -1765,23 +1765,23 @@ let sections = []
             	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
                     let sections = []
-                    let com = [`group open`,`leveling on`,`autosticker on`,`welcome on`,`antilinkgc on`,`antilinktg on`,`antilinktt on`,`antilinkytch on`,`antilinkytvid on`,`antilinkig on`,`antilinkfb on`,`antilinktwit on`,`antilinkall on`,`antiwame on`,`antitoxic on`,`antivirus on`,`autorevoke on`,`autoreply on`]
-                    let comm = [`group close`,`leveling off`,`autosticker off`,`welcome off`,`antilinkgc off`,`antilinktg on`,`antilinktt on`,`antilinkytch on`,`antilinkytvid on`,`antilinkig on`,`antilinkfb on`,`antilinktwit on`,`antilinkall on`,`antiwame on`,`antitoxic on`,`antivirus on`,`autorevoke on`,`autoreply on`]
-                    let listnya = [`Group open/close`,`Leveling on/off`,`Auto-Sticker on/off`,`Welcome/Left on/off`,`Antilink Group on/off`,`Antilink Telegram on/off`,`Antilink Tiktok on/off`,`Antilink Youtube Channel on/off`,`Antilink Youtube Video on/off`,`Antilink Instagram on/off`,`Antilink Facebook on/off`,`Antilink Twitter on/off`,`Antilink All on/off`,`Anti Wame on/off`,`Anti Toxic on/off`,`Anti Virus on/off`,`Auto Revoke on/off`,`Auto Reply on/off`]
-                    let suruh = [`Enable`, `Disable`]
-                    let fiturname = [`Group`,`Leveling`,`Auto Sticker`,`Welcome`,`Antilink Group`,`Antilink Telegram`,`Antilink Tiktok`,`Antilink Youtube Channel`,`Antilink Youtube Video`,`Antilink Instagram`,`Antilink Facebook`,`Antilink Twitter`,`Antilink All`,`Anti Wame`,`Anti Toxic`,`Anti Virus`,`Auto Revoke`,`Auto Reply`]
+                    let com = [`group open`,`antilinkall on`,`antitoxic on`,`antivirus on`,`antilinkgc on`,`antilinktg on`,`antilinktt on`,`antilinkytch on`,`antilinkytvid on`,`antilinkig on`,`antilinkfb on`,`antilinktwit on`,`antiwame on`,`nsfw on`]
+                    let comm = [`group close`,`antilinkall off`,`antitoxic off`,`antivirus off`,`antilinkgc off`,`antilinktg on`,`antilinktt on`,`antilinkytch on`,`antilinkytvid on`,`antilinkig on`,`antilinkfb on`,`antilinktwit on`,`antiwame on`,`nsfw on`]
+                    let listnya = [`Group open/close`,`antilinkall on/off`,`antitoxic on/off`,`antivirus on/off`,`Antilink Group on/off`,`Antilink Telegram on/off`,`Antilink Tiktok on/off`,`Antilink Youtube Channel on/off`,`Antilink Youtube Video on/off`,`Antilink Instagram on/off`,`Antilink Facebook on/off`,`Antilink Twitter on/off`,`Anti Wame on/off`,`nsfw on/off`]
+                    let suruh = [`Activate this command`, `Deactivate this command`]
+                    let fiturname = [`🥵 𝗚𝗿𝗼𝘂𝗽 ✨`,`🥵 𝗔𝗻𝘁𝗶𝗹𝗶𝗻𝗸 𝗮𝗹𝗹 🔗`,`🥵 𝗔𝗻𝘁𝗶 𝘁𝗼𝘅𝗶𝗰 ☣️`,`🥵 𝗔𝗻𝘁𝗶 𝘃𝗶𝗿𝘂𝘀 🦠`,`🥵 𝗔𝗻𝘁𝗶 𝗴𝗿𝗼𝘂𝗽 𝗹𝗶𝗻𝗸 🔗`,`🥵 𝗔𝗻𝘁𝗶 𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺 𝗹𝗶𝗻𝗸 🔗`,`🥵 𝗔𝗻𝘁𝗶 𝗧𝗶𝗸𝗧𝗼𝗸 𝗹𝗶𝗻𝗸 🔗`,`🥵 𝗔𝗻𝘁𝗶 𝗬𝗼𝘂𝗧𝘂𝗯𝗲 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 𝗹𝗶𝗻𝗸 🔗`,`🥵 𝗔𝗻𝘁𝗶 𝗬𝗼𝘂𝗧𝘂𝗯𝗲 𝘃𝗶𝗱𝗲𝗼 𝗹𝗶𝗻𝗸 🔗`,`🥵 𝗔𝗻𝘁𝗶 𝗜𝗻𝘀𝘁𝗮𝗴𝗿𝗮𝗺 𝗹𝗶𝗻𝗸 🔗`,`🥵 𝗔𝗻𝘁𝗶 𝗙𝗮𝗰𝗲𝗯𝗼𝗼𝗸 𝗹𝗶𝗻𝗸 🔗`,`🥵 𝗔𝗻𝘁𝗶 𝗧𝘄𝗶𝘁𝘁𝗲𝗿 𝗹𝗶𝗻𝗸 🔗`,`🥵 𝗔𝗻𝘁𝗶 𝗪𝗵𝗮𝘁𝘀𝗔𝗽𝗽 𝗽𝗿𝗼𝗳𝗶𝗹𝗲 𝗹𝗶𝗻𝗸 🔗`,`🥵 𝗡𝗦𝗙𝗪 💦`]
                     let startnum = 0; let startnu = 0; let startn = 0;let start = 0
                     let startnumm = 1
                     for (let x of com) {
                         const yy = {title: `${listnya[startnum++]}`,
                     rows: [
                        {
-                        title: `${suruh[0]}`,
-                        description: `Activate ${fiturname[startnu++]}`,
+                        title: `${fiturname[startnu++]}`,
+                        description: `${suruh[0]}`,
                         rowId: `${prefix}${x}`
                       },{
-                        title: `${suruh[1]}`,
-                        description: `Deactivate ${fiturname[startn++]}`,
+                        title: `${fiturname[startn++]}`,
+                        description: `${suruh[1]}`,
                         rowId: `${prefix}${comm[start++]}`
                       }
                     ]
@@ -5576,7 +5576,7 @@ case 'watercolor': case 'multicolor': case 'neondevil': case 'underwater': case 
  case 'snow': case 'cloud': case 'honey': case 'ice': case 'fruitjuice': case 'biscuit': case 'wood': 
 case 'chocolate': case 'strawberry': case 'matrix': case 'blood': case 'dropwater': case 'toxic': 
 case 'lava': case 'rock': case 'bloodglas': case 'hallowen': case 'darkgold': case 'joker': case 'wicker':
- case 'firework': case 'skeleton': case 'blackpink': case 'sand': case 'glue': case '1917': case 'leaves': {
+ case 'firework': case 'skeleton': case 'blackpink': case 'sand': case 'glue': case '1917': case 'leaves': case pornhub': case 'retro': case 'horror': {
               if (!q) return reply(`🎃 *You have to type this command with a word* .\n\n❤️ *Example* : ${prefix + command} ${pushname}`) 
           
              let link
@@ -5641,7 +5641,7 @@ case 'lava': case 'rock': case 'bloodglas': case 'hallowen': case 'darkgold': ca
              if (/retro/.test(command)) link = 'https://textpro.me/create-3d-retro-text-effect-online-free-1065.html'                              
                 if (/leaves/.test(command)) link = 'https://textpro.me/natural-leaves-text-effect-931.html'
              let anu = await maker.textpro(link, q)
-                Miku.sendMessage(m.chat, { image: { url: anu }, caption: `Made by ${global.botname},For my Darling ` }, { quoted: m })
+                Miku.sendMessage(m.chat, { image: { url: anu }, caption: `_Here is your text style ${pushname} baby_ .\n_Made by ${global.BotName}_ ❤️` }, { quoted: m })
              }
              break
 

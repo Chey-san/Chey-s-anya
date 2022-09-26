@@ -5159,7 +5159,7 @@ replay('Broadcast Sent !')
 break    
 
 
-case 'allmenu': case 'h':{
+case 'allmenu': case 'help':{
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
       
@@ -5577,7 +5577,7 @@ case 'groupmenu':
                 {buttonId: `-menu`, buttonText: {displayText: '🍓 𝘔𝘦𝘯𝘶 🍓'}, type: 1}
                 ]
                 let buttonMessage = {
-                    video:fs.readFileSync('./system/miku10.mp4'),gifPlayback:true,
+                    video:fs.readFileSync('./system/Group.mp4'),gifPlayback:true,
                     caption: needhelpmenu,
                     footer: `${global.BotName}`,
                     buttons: butRun,
@@ -5630,7 +5630,7 @@ case 'ownermenu':
                 {buttonId: `-menu`, buttonText: {displayText: '🍓 𝘔𝘦𝘯𝘶 🍓'}, type: 1}
                 ]
                 let buttonMessage = {
-                    video:fs.readFileSync('./system/owner.jpg'),gifPlayback:true,
+                    video:fs.readFileSync('./system/Owner.mp4'),gifPlayback:true,
                     caption: txt,
                     footer: `${global.BotName}`,
                     buttons: butRun,
@@ -5681,7 +5681,7 @@ case 'antilinkmenu':
                 {buttonId: `-menu`, buttonText: {displayText: '🍓 𝘔𝘦𝘯𝘶 🍓'}, type: 1}
                 ]
                 let buttonMessage = {
-                    video:fs.readFileSync('./system/Antilink.jpg'),gifPlayback:true,
+                    video:fs.readFileSync('./system/Antilink.mp4'),gifPlayback:true,
                     caption: txt,
                     footer: `${global.BotName}`,
                     buttons: butRun,

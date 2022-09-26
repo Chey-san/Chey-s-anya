@@ -5740,8 +5740,7 @@ case 'add':{
  }
  break
 
-                    case 'stupid':
-      case 'foolish':
+   case 'foolish':
       case 'smart':
       case 'idiot':
       case 'gay':
@@ -5774,6 +5773,7 @@ case 'add':{
       case 'bhosdiwala':
       case 'chutmarika':
       case 'bokachoda':
+      case 'stupid':
       case 'suarerbaccha':
       case 'bolochoda':
       case 'muthal':
@@ -5824,23 +5824,33 @@ case 'add':{
       case 'fuckgirl':
       case 'playgirl':
       case 'bc':
-      case 'hot': {
-      	            	if (isBan) return reply(mess.ban)
-	if (isBanChat) return reply(mess.banChat)
-            if (!m.isGroup) return replay(`${mess.group}`)
-            let member = participants.map(u => u.id)
-            let me = m.sender
-            let jodoh = member[Math.floor(Math.random() * member.length)]
-            let jawab = `I found your answer ${pushname}.\n\n*Yaha sabse *${command}* hai @${jodoh.split('@')[0]}* 👀.`
-            let ments = [me, jodoh]
-            let buttons = [
-                        { buttonId: '👀', buttonText: { displayText: '👀😂' }, type: 1 },
-                        {buttonId: '-funmenu', buttonText: { displayText: 'Again 🤭' }, type: 1 },
-                        {buttonId: '-menu', buttonText: { displayText: '🍓 Menu 🍓' }, type: 1 }
-                    ]
-                    await Miku.sendButtonText(m.chat, buttons, jawab, ${global.BotName}, m, {mentions: ments})
-            }
-            break
+      case 'hot': 
+    if(isCmd){
+    if (isBan) return reply(mess.banned)	 			
+    if (isBanChat) return reply(mess.bangc)
+
+      mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
+    
+        
+ const txt = `I got your answer ${pushname} 🤭.
+
+*Yaha sbse ${command} hai @${jodoh.split('@')[0]}*`
+     
+         let butRun = [
+                {buttonId: `-owner`, buttonText: {displayText: '❤️ 𝘖𝘸𝘯𝘦𝘳 ❤️'}, type: 1},
+                {buttonId: `-funmenu`, buttonText: {displayText: 'Fun menu 😂'}, type: 1},      
+                {buttonId: `-menu`, buttonText: {displayText: '🍓 𝘔𝘦𝘯𝘶 🍓'}, type: 1}
+                ]
+                let buttonMessage = {
+                    video:fs.readFileSync('./system/Funmenu2.mp4'),gifPlayback:true,
+                    caption: txt,
+                    footer: `${global.BotName}`,
+                    buttons: butRun,
+                    headerType: 4
+                }
+            Miku.sendMessage(m.chat,buttonMessage,{quoted:m})
+                }
+break
 
 case 'candy': case 'christmas': case '3dchristmas': case 'sparklechristmas':
 case 'deepsea': case 'scifi': case 'rainbow': case 'waterpipe': case 'spooky': 

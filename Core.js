@@ -5838,7 +5838,7 @@ case 'add':{
                         {buttonId: '-funmenu', buttonText: { displayText: 'Again 🤭' }, type: 1 },
                         {buttonId: '-menu', buttonText: { displayText: '🍓 Menu 🍓' }, type: 1 }
                     ]
-                    await Miku.sendButtonText(m.chat, buttons, jawab, botname, m, {mentions: ments})
+                    await Miku.sendButtonText(m.chat, buttons, jawab, ${global.BotName}, m, {mentions: ments})
             }
             break
 

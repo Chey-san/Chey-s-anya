@@ -2437,7 +2437,7 @@ if (args[0] === "on") {
 if (antiVirtex) return replay('Already activated')
 ntvirtex.push(from)
 replay('Success in turning on antivirus in this group')
-var groupe = await Nexus.groupMetadata(from)
+var groupe = await Miku.groupMetadata(from)
 var members = groupe['participants']
 var mems = []
 members.map(async adm => {
@@ -2454,7 +2454,7 @@ replay('Success in turning off antivirus this group')
   { buttonId: `${prefix}antivirtex on`, buttonText: { displayText: 'On' }, type: 1 },
   { buttonId: `${prefix}antivritex off`, buttonText: { displayText: 'Off' }, type: 1 }
   ]
-  await Nexus.sendButtonText(m.chat, buttonsntvirtex, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.BotName}`, m)
+  await Miku.sendButtonText(m.chat, buttonsntvirtex, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.BotName}`, m)
   }
   }
   break
@@ -2486,7 +2486,7 @@ replay('Success in turning off antitoxic in this group')
   { buttonId: `${prefix}antitoxic on`, buttonText: { displayText: 'On' }, type: 1 },
   { buttonId: `${prefix}antitoxic off`, buttonText: { displayText: 'Off' }, type: 1 }
    ]
-  await Nexus.sendButtonText(m.chat, buttonsnttoxci, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.BotName}`, m)
+  await Miku.sendButtonText(m.chat, buttonsnttoxci, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.BotName}`, m)
   }
   }
   break

@@ -1801,148 +1801,163 @@ if (isBanChat) return reply(mess.banChat)
 }
   break
 
-/* case 'command': {
-      if (isBan) return reply(mess.banned)	 			
-
-if (isBanChat) return reply(mess.bangc)
-
-            let sections = [{
-								"title": "Main Features",
+                case 'command': {
+                	   if (isBan) return reply(mess.ban)
+	if (isBanChat) return reply(mess.banChat)
+let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                listMessage :{
+                    title: `Hi ${pushname}`,
+                    description: `Please Choose The Menu\n\n`,
+                    buttonText: "Menu",
+                    footerText: `${global.botname}`,
+                    listType: "SINGLE_SELECT",
+                    sections: [{
+								"title": "Initial Features Of Bot 🦄",
 								"rows": [
 									{
-										"title": "Main Menu",
-										"description": "List of main features",
-										"rowId": `${prefix}mainmenu`
+										"title": "Other ☕",
+										"description": "Displays The List Of Other Features",
+										"rowId": `${prefix}othermenu`
 									}
 								]
 							},
 							{
-								"title": "Bot Features",
+								"title": "Bot Features ❤️",
 								"rows": [
 									{
-										"title": "All Menu",
-										"description": "List of all the features!",
+										"title": "All Menu 🥀",
+										"description": "Displays The List Of All The Features!",
 										"rowId": `${prefix}allmenu`
 									},
 									{
-										"title": "Owner Menu",
-										"description": "List of owner features",
+										"title": "Owner Menu 💠",
+										"description": "Displays The List Of Owner Features",
 										"rowId": `${prefix}ownermenu`
 										},
 									{
-										"title": "Group Menu",
-										"description": "List of main features",
+										"title": "Group Menu ✨",
+										"description": "Displays The List Of Main Features",
 										"rowId": `${prefix}groupmenu`
 										},
-									{
-										"title": "Rpg Menu",
-										"description": "List f Rpg features",
+										{
+										"title": "Rpg Menu 🏞️",
+										"description": "Displays The List Of Rpg Features",
 										"rowId": `${prefix}rpgmenu`
+										},
+										{
+										"title": "Maker Menu 🌈",
+										"description": "Displays The List Of Logo Making Features",
+										"rowId": `${prefix}indomenu`
 									},
 									{
-										"title": "Download Menu",
-										"description": "List of download features",
+										"title": "Sound Menu 🎵",
+										"description": "Displays The List Of Sound Features",
+										"rowId": `${prefix}soundmenu`
+									},
+									{
+										"title": "Download Menu ↘️",
+										"description": "Displays The List Of Download Features",
 										"rowId": `${prefix}downloadmenu`
 									},
 									{
-										"title": "Search Menu",
-										"description": "List of searching features",
+										"title": "Sticker Menu 🃏",
+										"description": "Displays The List Of Sticker Features",
+										"rowId": `${prefix}indomenu`
+									},
+									{
+										"title": "Search Menu 🔎",
+										"description": "Displays The List Of Searching Features",
 										"rowId": `${prefix}searchmenu`
 									},
 									{
-											"title": "Random Menu",
-										"description": "List of random features",
-										"rowId": `${prefix}randommenu`
+										"title": "Tool Menu ⚙️",
+										"description": "Displays The List Of Tool Features",
+										"rowId": `${prefix}toolmenu`
+									},
+									{
+										"title": "Random Image Menu 🌆",
+										"description": "Displays The List Of Random Image Features",
+										"rowId": `${prefix}randomimagemenu`
+									},
+										{
+											"title": "Anime Menu 😘",
+										"description": "Displays The List Of Random Anime Features",
+										"rowId": `${prefix}animemenu`
 										},
 										{
-											"title": "Random Anime Menu",
-										"description": "List of random Anime features",
-										"rowId": `${prefix}randomanimemenu`
-										},
+										"title": "Anime Sticker Menu ☺️",
+										"description": "Displays The List Of Anime Sticker Features",
+										"rowId": `${prefix}animestickermenu`
+									     },
+									{
+										"title": "Nsfw Menu 🤓",
+										"description": "Displays The List Of Nsfe Features",
+										"rowId": `${prefix}nsfwmenu`
+									     },
 										{
-											"title": "Fun Menu",
-										"description": "List of fun features",
+											"title": "Fun Menu 🕺",
+										"description": "Displays The List Of Fun Features",
 										"rowId": `${prefix}funmenu`
 										},
 										{
-											"title": "Convert Menu",
-										"description": "List of convert features",
+										"title": "Game Menu 🎮",
+										"description": "Displays The List Of Game Features",
+										"rowId": `${prefix}indomenu`
+									},
+										{
+											"title": "Convert Menu ⚒️",
+										"description": "Displays The List Of Convert Features",
 										"rowId": `${prefix}convertmenu`
 										},
 										{
-											"title": "Database Menu",
-										"description": "List of database features",
+											"title": "Database Menu ♻️",
+										"description": "Displays The List Of Database Features",
 										"rowId": `${prefix}databasemenu`
 										},
 										{
-											"title": "Voice Changer Menu",
-										"description": "List of Voice Changing features",
-										"rowId": `${prefix}voicechangermenu`
+											"title": "Islamic Menu 🧕",
+										"description": "Displays The List Of Islamic Features",
+										"rowId": `${prefix}islamicmenu`
 										},
 										{
-											"title": "TXT-to-IMG Menu",
-										"description": "List Of Textpro features",
-										"rowId": `${prefix}textpromenu`
-										},
+										"title": "Indo Menu  🦜",
+										"description": "Displays The List Of Indo Features",
+										"rowId": `${prefix}indomenu`
+									},
 										{
-											"title": "Useless Menu",
-										"description": "List of useless features",
-										"rowId": `${prefix}ownermenu`
-										},
-										{
-											"title": "Horoscope Menu",
-										"description": "List of Horoscope features",
-										"rowId": `${prefix}horoscopemenu`
+											"title": "Horoscope Menu 🕊️",
+										"description": "Displays The List Of Horoscope Features",
+										"rowId": `${prefix}indohoroscopemenu`
 										}
 								]
 							},
 							{
-								"title": "Chat With Fellow Users",
+								"title": "Chat With Fellow Users 🌝",
 								"rows": [
 									{
-										"title": "Anonymous Chat Menu",
-										"description": "List of anonymous chat features",
-										"rowId": `${prefix}anonymouschatmenu`
+										"title": "Anonymous Chat Menu 🙎🏻‍♂️",
+										"description": "Displays The List Of Anonymous Chat Features",
+										"rowId": `${prefix}anonymousmenu`
 									}
 								]
 							},
 							{
-								"title": "Credit",
+								"title": "Credit ©️",
 								"rows": [
 									{
-										"title": "Thanks To",
-										"description": "List of credit of The Bot !!",
+										"title": "Thanks To ❤️",
+										"description": "Displays The List Of Credit Of The Bot !!",
 										"rowId": `${prefix}tqtt`
 									}
 								]
 							}
 						],
-          
-                 sections.push(yy)
+          listType: 1
+                }
+            }), {})
+            Miku.relayMessage(m.chat, template.message, { messageId: template.key.id })
             }
-            const sendm =  Miku.sendMessage(
-
-from, 
-
-{
-
-text: " Shortcuts for your group setting... ",
-
-footer: BotName,
-
-title: " *Group Settings* ",
-
-buttonText: "Tap here❤️",
-
-sections
-
-}, { quoted : m }
-
-)  
-
-}
-
-break*/
+            break
 
 /*
 case 'animesearchxxx': case 'anime':{
@@ -4555,7 +4570,7 @@ reply(mess.waiting)
  waifudd = await axios.get(`https://nekos.life/api/v2/img/${command}`)
                            var wbuttsss = [
         {buttonId: `-${command}`, buttonText: {displayText: `One more🤍`}, type: 1},
-        {buttonId: `-neko`, buttonText: {displayText: `Neko🍓`}, type: 1},
+        {buttonId: `-crosplay`, buttonText: {displayText: `Hot girl 🔥`}, type: 1},
         {buttonId: `-loli`, buttonText: {displayText: `Loli ❣️`}, type: 1}
         ]
       let buttonssMessages = {
@@ -5410,9 +5425,6 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 ❒✗ -sand
 ❒✗ -glue
 ❒✗ -1917
-❒✗ -pornhub
-❒✗ -retro
-❒✗ -horror
 
  *━━━〈  🧮 Informative 🧮  〉━━━*
 

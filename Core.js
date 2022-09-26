@@ -5824,32 +5824,23 @@ case 'add':{
       case 'fuckgirl':
       case 'playgirl':
       case 'bc':
-      case 'hot': 
-    if(isCmd){
-    if (isBan) return reply(mess.banned)	 			
+      case 'hot': {
+    if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
+if (!m.isGroup) return replay(`${mess.grouponly}`)
+let member = participants.map(u => u.id)
+let orang = member[Math.floor(Math.random() * member.length)]
+let jodoh = member[Math.floor(Math.random() * member.length)]
+let jawab = `${global.BotName} got your answer ${pushname}✨.
 
-      mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
-    
-        
- const txt = `I got your answer ${pushname} 🤭.
-
-*Yaha sbse ${command} hai @${jodoh.split('@')[0]}*`
-     
-         let butRun = [
-                {buttonId: `-owner`, buttonText: {displayText: '❤️ 𝘖𝘸𝘯𝘦𝘳 ❤️'}, type: 1},
-                {buttonId: `-funmenu`, buttonText: {displayText: 'Fun menu 😂'}, type: 1},      
-                {buttonId: `-menu`, buttonText: {displayText: '🍓 𝘔𝘦𝘯𝘶 🍓'}, type: 1}
-                ]
-                let buttonMessage = {
-                    video:fs.readFileSync('./system/Funmenu2.mp4'),gifPlayback:true,
-                    caption: txt,
-                    footer: `${global.BotName}`,
-                    buttons: butRun,
-                    headerType: 4
-                }
-            Miku.sendMessage(m.chat,buttonMessage,{quoted:m})
-                }
+*The most ${command} here is @${jodoh.split('@')[0]}* 🐦.`
+let menst = [orang, jodoh]
+let buttons = [
+{buttonId: `-congratulations`, buttonText: { displayText: '❤️ Congratulations ❤️' }, type: 1 },
+{buttonId: `-me`, buttonText: {displayText: 'My profile 🥵'}, type: 1}
+]
+await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: menst})
+}
 break
 
 case 'candy': case 'christmas': case '3dchristmas': case 'sparklechristmas':

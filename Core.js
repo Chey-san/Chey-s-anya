@@ -5576,7 +5576,7 @@ case 'watercolor': case 'multicolor': case 'neondevil': case 'underwater': case 
  case 'snow': case 'cloud': case 'honey': case 'ice': case 'fruitjuice': case 'biscuit': case 'wood': 
 case 'chocolate': case 'strawberry': case 'matrix': case 'blood': case 'dropwater': case 'toxic': 
 case 'lava': case 'rock': case 'bloodglas': case 'hallowen': case 'darkgold': case 'joker': case 'wicker':
- case 'firework': case 'skeleton': case 'blackpink': case 'sand': case 'glue': case '1917': case 'leaves': case pornhub': case 'retro': case 'horror': {
+ case 'firework': case 'skeleton': case 'blackpink': case 'sand': case 'glue': case '1917': case 'leaves': case 'pornhub': case 'retro': case 'horror': {
               if (!q) return reply(`🎃 *You have to type this command with a word* .\n\n❤️ *Example* : ${prefix + command} ${pushname}`) 
           
              let link

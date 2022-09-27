@@ -3773,7 +3773,7 @@ headerType: 4,
 contextInfo:{externalAdReply:{
 title: anu.title,
 body: `${global.botname}`,
-thumbnail: log0,
+thumbnail: BotLogo,
 mediaType:2,
 mediaUrl: anu.url,
 sourceUrl: anu.url

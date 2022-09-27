@@ -1803,17 +1803,18 @@ if (isBanChat) return reply(mess.banChat)
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
                     title: `Aww my darling ${pushname} you need help? 🥺❤️`,
-                    description: `╭╼━᚜ 𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪 ᚛━╾╮
-│                                      ❒
+                    description: `╭╼━━᚜ 𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪 ᚛━━╾╮
+│                                            ❒
 🔥 *My prefix*       : ( - )
 ❤️ *My name*       : ${global.BotName}
 🥵 *User name*    : ${pushname}
 😻 *Bot speed*      : ${latensie.toFixed(4)} ms
 ❤️‍🔥 *Bot users*      : ${Object.keys(global.db.users).length}
 🎃 *Owner name* : ${global.OwnerName}
+🦊 *Owner num.*  : http://wa.me//${global.OwnerNumber}
 🍓 *Group name*  : ${groupMetadata.subject}
-│                                      ❒
-╰╼━━━━━━━━━━━━╾╯\n\n`,
+│                                            ❒
+╰╼━━━━━━━━━━━━━━╾╯\n\n`,
                     buttonText: "❤️⃟ ✮͢ 𝑻𝒂𝒑 𝒉𝒆𝒓𝒆 ✮⃝💙" ,
                     footerText: `${global.BotName}`,
                     listType: "SINGLE_SELECT",
@@ -5228,7 +5229,7 @@ case 'allmenu': case 'help':{
 🔥 *My prefix*       : ( - )
 ❤️ *My name*       : ${global.BotName}
 🥵 *User name*    : ${pushname}
-😻 *Bot speed*      : ${latensie.toFixed(4)} miliseconds
+😻 *Bot speed*     : ${latensie.toFixed(4)} ms
 🎃 *Owner name* : ${global.OwnerName}
 🍓 *Group name*  : ${groupMetadata.subject}
 │                                      ❒
@@ -5597,8 +5598,8 @@ case 'groupmenu':
 🔥 *My prefix*       : ( - )
 ❤️ *My name*       : ${global.BotName}
 🥵 *User name*    : ${pushname}
+😻 *Bot speed*     : ${latensie.toFixed(4)} ms
 🎃 *Owner name* : ${global.OwnerName}
-😻 *Owner no.*     : http://wa.me//${global.Owner}
 🍓 *Group name*  : ${groupMetadata.subject}
 │                                      ❒
 ╰╼━━━━━━━━━━━━╾╯
@@ -5654,8 +5655,8 @@ case 'ownermenu':
 🔥 *My prefix*       : ( - )
 ❤️ *My name*       : ${global.BotName}
 🥵 *User name*    : ${pushname}
+😻 *Bot speed*     : ${latensie.toFixed(4)} ms
 🎃 *Owner name* : ${global.OwnerName}
-😻 *Owner no.*     : http://wa.me//${global.Owner}
 🍓 *Group name*  : ${groupMetadata.subject}
 │                                      ❒
 ╰╼━━━━━━━━━━━━╾╯
@@ -5707,8 +5708,8 @@ case 'antilinkmenu':
 🔥 *My prefix*       : ( - )
 ❤️ *My name*       : ${global.BotName}
 🥵 *User name*    : ${pushname}
+😻 *Bot speed*     : ${latensie.toFixed(4)} ms
 🎃 *Owner name* : ${global.OwnerName}
-😻 *Owner no.*     : http://wa.me//${global.Owner}
 🍓 *Group name*  : ${groupMetadata.subject}
 │                                      ❒
 ╰╼━━━━━━━━━━━━╾╯

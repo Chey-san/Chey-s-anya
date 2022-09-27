@@ -1803,19 +1803,20 @@ if (isBanChat) return reply(mess.banChat)
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
                     title: `Aww my darling ${pushname} you need help? 🥺❤️`,
-                    description: `╭╼━━᚜ 𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪 ᚛━━╾╮
-│                                            ❒
+                    description: `╭╼━━━᚜ 𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪 ᚛━━━╾╮
+│                                                 ❒
 🔥 *My prefix*       : ( - )
 ❤️ *My name*       : ${global.BotName}
 🥵 *User name*    : ${pushname}
 😻 *Bot speed*      : ${latensie.toFixed(4)} ms
+🐤 *Bot runtime*   : ${runtime(process.uptime())}
 ❤️‍🔥 *Bot users*      : ${Object.keys(global.db.users).length}
 🎃 *Owner name* : ${global.OwnerName}
 🦊 *Owner num.*  : http://wa.me//${global.OwnerNumber}
 🍓 *Group name*  : ${groupMetadata.subject}
-│                                            ❒
-╰╼━━━━━━━━━━━━━━╾╯\n\n`,
-                    buttonText: "❤️⃟ ✮͢ 𝑻𝒂𝒑 𝒉𝒆𝒓𝒆 ✮⃝💙" ,
+│                                                 ❒
+╰╼━━━━━━━━━━━━━━━━╾╯\n\n`,
+                    buttonText: "🦋⃟✮͢ 𝑻𝒂𝒑 𝒉𝒆𝒓𝒆 ✮⃝❤️" ,
                     footerText: `${global.BotName}`,
                     listType: "SINGLE_SELECT",
                     sections: [{
@@ -2549,7 +2550,7 @@ replay('Success in turning off antitoxic in this group')
   { buttonId: `${command} on`, buttonText: { displayText: 'On' }, type: 1 },
   { buttonId: `${command} off`, buttonText: { displayText: 'Off' }, type: 1 }
   ]
-  await Miku.sendButtonText(m.chat, buttonsnttoxic, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.botname}`, m)
+  await Miku.sendButtonText(m.chat, buttonsnttoxci, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.botname}`, m)
   }
   }
   break

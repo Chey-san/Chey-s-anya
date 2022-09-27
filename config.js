@@ -7,13 +7,13 @@ global.autoReadAll = false
 global.antitags = true
 
 
-global.Owner = ['918811074852']
-global.OwnerNumber = ['918811074852']
-global.ownertag = ['918811074852']
+global.Owner = ['918373017400']
+global.OwnerNumber = ['918373017400']
+global.ownertag = ['918373017400']
 global.BotName = "Anya❤️"
 global.packname = "Anya bot"
-global.author = "By: Pika❤️"
-global.OwnerName = "3.69_pika"
+global.author = "By: chey❤️"
+global.OwnerName = "ᥴꫝꫀꪗ-𝙎𝙖𝙣💫🌙✨"
 global.BotSourceCode = "https://github.com/Pika4O4/Anya-pika"
 global.SupportGroupLink = "https://chat.whatsapp.com/H6CUtq40oRDKIofIEbf1qEl"
 global.sessionName = "session"
@@ -23,7 +23,7 @@ global.sessionName = "session"
 global.prefa = ['-'] 
 
 
-global.location = "Assam, India"
+global.location = "West Bengal, India"
 global.reactmoji = "❤️"
 global.themeemoji = "💖"
 global.vidmenu = { url: 'https://c.tenor.com/YGuLegQWubwAAAPo/miku-nakano-gotoubun-no-hanayome.mp4' }

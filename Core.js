@@ -221,16 +221,9 @@ for (let nexus of vien){
 	}
 	} 
 
-for (let nexus of gif){
-    if (budy == nexus){
-	    result = fs.readFileSync(`./Anymedia/Gif.auto/${nexus}.mp4`)
-	    Miku.sendMessage(m.chat, { gif: result }, { quoted: m})
-	}
-	}
-
 for (let nexus of setik){
     if (budy === nexus){
-	    result = fs.readFileSync(`./Anymedia/${nexus}.webp`)
+	    result = fs.readFileSync(`./Anymedia/Sticker.auto/${nexus}.webp`)
             Miku.sendMessage(m.chat, { sticker: result }, { quoted: m })
   	}						 
 	}

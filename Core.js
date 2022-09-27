@@ -1545,21 +1545,8 @@ if (isBanChat) return reply(mess.banChat)
 reply(` Here's the list of some awesome *Bot groups* ❤️✨
 
 
-
 🔥 *Group 1*
-https://chat.whatsapp.com/C5Z7STKARBK28Wln3RcHT2
-
-🔥 *Group 2*
-https://chat.whatsapp.com/GB9m2XdCYk3AYCEomSbYATl
-
-🔥 *Group 3*
-https://chat.whatsapp.com/JvPmGrrlaFZ6lIuVuYOgYbl
-
-🔥 *Group 4*
-https://chat.whatsapp.com/DDWBpH9ciy38RCGYO7RkfM
-
-🔥 *Group 5*
-https://chat.whatsapp.com/JVFC9BHmmk9IiPlsu8raVzl
+https://chat.whatsapp.com/LU1AgpjfN5xAoZEOrKBs0d
 
 
 
@@ -1803,7 +1790,7 @@ if (isBanChat) return reply(mess.banChat)
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
                     title: `Aww my darling ${pushname} you need help? 🥺❤️`,
-                    description: `╭╼━━━᚜ 𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪 ᚛━━━╾╮
+                    description: `╭╼━━━᚜ 𝓐𝔂𝓷𝓪 𝓫𝔂 𝓒𝓱𝓮𝔂 ᚛━━━╾╮
 │                                                 ❒
 🔥 *My prefix*       : ( - )
 ❤️ *My name*       : ${global.BotName}
@@ -1811,7 +1798,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 😻 *Bot speed*      : ${latensie.toFixed(4)} ms
 🐤 *Bot runtime*   : ${runtime(process.uptime())}
 ❤️‍🔥 *Bot users*      : ${Object.keys(global.db.users).length}
-🎃 *Owner name* : ${global.OwnerName}
+💜 *Owner name* : ${global.OwnerName}
 🦊 *Owner num.*  : http://wa.me//${global.OwnerNumber}
 🍓 *Group name*  : ${groupMetadata.subject}
 │                                                 ❒
@@ -5225,7 +5212,7 @@ case 'allmenu': case 'help':{
       
  const helpmenu = `Hey *${pushname}* Darling❤️,
 
-╭╼━᚜ 𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪 ᚛━╾╮
+╭╼━᚜ 𝓐𝔂𝓷𝓪 𝓫𝔂 𝓒𝓱𝓮𝔂 ᚛━╾╮
 │                                      ❒
 🔥 *My prefix*       : ( - )
 ❤️ *My name*       : ${global.BotName}
@@ -5539,8 +5526,8 @@ case 'allmenu': case 'help':{
 ❤️ Then type " *${prefix}nsfwmenu* " to get full list of NSFW commands.
 
 
- 『  𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪  』
- Powered by : *Pika❤️*
+ 『  𝓐𝔂𝓷𝓪 𝓫𝔂 𝓒𝓱𝓮𝔂  』
+ Powered by : *ᥴꫝꫀꪗ-𝙎𝙖𝙣💫🌙✨❤️*
  Using by       : *${pushname}*`    
 
  let buttonshelpm = [{buttonId: `${prefix}owner`, buttonText: {displayText: `❤️owner❤️`}, type: 1},
@@ -5594,7 +5581,7 @@ case 'groupmenu':
       mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
     
         
- const needhelpmenu = `╭╼━᚜ 𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪 ᚛━╾╮
+ const needhelpmenu = `╭╼━᚜ 𝓐𝔂𝓷𝓪 𝓫𝔂 𝓒𝓱𝓮𝔂 ᚛━╾╮
 │                                      ❒
 🔥 *My prefix*       : ( - )
 ❤️ *My name*       : ${global.BotName}
@@ -5605,7 +5592,7 @@ case 'groupmenu':
 │                                      ❒
 ╰╼━━━━━━━━━━━━╾╯
 
-╭╼━᚜ 𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪 ᚛━╾╮
+╭╼━᚜ 𝓐𝔂𝓷𝓪 𝓫𝔂 𝓒𝓱𝓮𝔂 ᚛━╾╮
 ╽                                     🎃
 ┃
 ❒✗ -deletethis  *( any msg )*
@@ -5651,7 +5638,7 @@ case 'ownermenu':
       mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
     
         
- const txt = `╭╼━᚜ 𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪 ᚛━╾╮
+ const txt = `╭╼━᚜ 𝓐𝔂𝓷𝓪 𝓫𝔂 𝓒𝓱𝓮𝔂 ᚛━╾╮
 │                                      ❒
 🔥 *My prefix*       : ( - )
 ❤️ *My name*       : ${global.BotName}
@@ -5662,7 +5649,7 @@ case 'ownermenu':
 │                                      ❒
 ╰╼━━━━━━━━━━━━╾╯
 
-╭╼━᚜ 𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪 ᚛━╾╮
+╭╼━᚜ 𝓐𝔂𝓷𝓪 𝓫𝔂 𝓒𝓱𝓮𝔂 ᚛━╾╮
 ╽                                     🎃
 ┃
 ❒✗ -alive  *( bot working? )*
@@ -5704,7 +5691,7 @@ case 'antilinkmenu':
       mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
     
         
- const txt = `╭╼━᚜ 𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪 ᚛━╾╮
+ const txt = `╭╼━᚜ 𝓐𝔂𝓷𝓪 𝓫𝔂 𝓒𝓱𝓮𝔂 ᚛━╾╮
 │                                      ❒
 🔥 *My prefix*       : ( - )
 ❤️ *My name*       : ${global.BotName}
@@ -5715,7 +5702,7 @@ case 'antilinkmenu':
 │                                      ❒
 ╰╼━━━━━━━━━━━━╾╯
 
-╭╼━᚜ 𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪 ᚛━╾╮
+╭╼━᚜ 𝓐𝔂𝓷𝓪 𝓫𝔂 𝓒𝓱𝓮𝔂 ᚛━╾╮
 ╽                                     🎃
 ┃
 ❒✗ -antilinkgc

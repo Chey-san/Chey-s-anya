@@ -1476,13 +1476,9 @@ case 'me': case 'profile': case 'myprofile':
 ╭╼━━━᚜𝓤𝓼𝓮𝓻 𝓲𝓷𝓯𝓸. ᚛━━━╾╮
 ╽
 🥵 *Your name* : ${pushname}
-
 🐤 *Bio* : ${bioo}
-
 🎃 *Group name* : ${groupMetadata.subject}
-
 ❤️ *Group admin?* : ${adn}
-
 🔥 *Bot name* : ${global.BotName}
 
 ╰╼━━━━━━━━━━━━━╾╯ 
@@ -1765,11 +1761,11 @@ let sections = []
             	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
                     let sections = []
-                    let com = [`group open`,`antilinkall on`,`antitoxic on`,`antivirus on`,`antilinkgc on`,`antilinktg on`,`antilinktt on`,`antilinkytch on`,`antilinkytvid on`,`antilinkig on`,`antilinkfb on`,`antilinktwit on`,`antiwame on`,`nsfw on`]
-                    let comm = [`group close`,`antilinkall off`,`antitoxic off`,`antivirus off`,`antilinkgc off`,`antilinktg on`,`antilinktt on`,`antilinkytch on`,`antilinkytvid on`,`antilinkig on`,`antilinkfb on`,`antilinktwit on`,`antiwame on`,`nsfw on`]
-                    let listnya = [`Group open/close`,`antilinkall on/off`,`antitoxic on/off`,`antivirus on/off`,`Antilink Group on/off`,`Antilink Telegram on/off`,`Antilink Tiktok on/off`,`Antilink Youtube Channel on/off`,`Antilink Youtube Video on/off`,`Antilink Instagram on/off`,`Antilink Facebook on/off`,`Antilink Twitter on/off`,`Anti Wame on/off`,`nsfw on/off`]
+                    let com = [`group open`,`antilinkall on`,`antitoxic on`,`antivirus on`,`autosticker on`,`autostickerpc on`,`antilinkgc on`,`antilinktg on`,`antilinktt on`,`antilinkytch on`,`antilinkytvid on`,`antilinkig on`,`antilinkfb on`,`antilinktwit on`,`antiwame on`,`nsfw on`]
+                    let comm = [`group close`,`antilinkall off`,`antitoxic off`,`antivirus off`,`autosticker off`,`autostickerpc on`,`antilinkgc off`,`antilinktg on`,`antilinktt on`,`antilinkytch on`,`antilinkytvid on`,`antilinkig on`,`antilinkfb on`,`antilinktwit on`,`antiwame on`,`nsfw on`]
+                    let listnya = [`Group open/close`,`antilinkall on/off`,`antitoxic on/off`,`antivirus on/off`,`autosticker on/off`,`autostickerpc on/off`,`Antilink Group on/off`,`Antilink Telegram on/off`,`Antilink Tiktok on/off`,`Antilink Youtube Channel on/off`,`Antilink Youtube Video on/off`,`Antilink Instagram on/off`,`Antilink Facebook on/off`,`Antilink Twitter on/off`,`Anti Wame on/off`,`nsfw on/off`]
                     let suruh = [`Activate this command`, `Deactivate this command`]
-                    let fiturname = [`🥵 𝗚𝗿𝗼𝘂𝗽 ✨`,`🥵 𝗔𝗻𝘁𝗶𝗹𝗶𝗻𝗸 𝗮𝗹𝗹 🔗`,`🥵 𝗔𝗻𝘁𝗶 𝘁𝗼𝘅𝗶𝗰 ☣️`,`🥵 𝗔𝗻𝘁𝗶 𝘃𝗶𝗿𝘂𝘀 🦠`,`🥵 𝗔𝗻𝘁𝗶 𝗴𝗿𝗼𝘂𝗽 𝗹𝗶𝗻𝗸 🔗`,`🥵 𝗔𝗻𝘁𝗶 𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺 𝗹𝗶𝗻𝗸 🔗`,`🥵 𝗔𝗻𝘁𝗶 𝗧𝗶𝗸𝗧𝗼𝗸 𝗹𝗶𝗻𝗸 🔗`,`🥵 𝗔𝗻𝘁𝗶 𝗬𝗼𝘂𝗧𝘂𝗯𝗲 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 𝗹𝗶𝗻𝗸 🔗`,`🥵 𝗔𝗻𝘁𝗶 𝗬𝗼𝘂𝗧𝘂𝗯𝗲 𝘃𝗶𝗱𝗲𝗼 𝗹𝗶𝗻𝗸 🔗`,`🥵 𝗔𝗻𝘁𝗶 𝗜𝗻𝘀𝘁𝗮𝗴𝗿𝗮𝗺 𝗹𝗶𝗻𝗸 🔗`,`🥵 𝗔𝗻𝘁𝗶 𝗙𝗮𝗰𝗲𝗯𝗼𝗼𝗸 𝗹𝗶𝗻𝗸 🔗`,`🥵 𝗔𝗻𝘁𝗶 𝗧𝘄𝗶𝘁𝘁𝗲𝗿 𝗹𝗶𝗻𝗸 🔗`,`🥵 𝗔𝗻𝘁𝗶 𝗪𝗵𝗮𝘁𝘀𝗔𝗽𝗽 𝗽𝗿𝗼𝗳𝗶𝗹𝗲 𝗹𝗶𝗻𝗸 🔗`,`🥵 𝗡𝗦𝗙𝗪 💦`]
+                    let fiturname = [`🥵 𝗚𝗿𝗼𝘂𝗽 ✨`,`🥵 𝗔𝗻𝘁𝗶𝗹𝗶𝗻𝗸 𝗮𝗹𝗹 🔗`,`🥵 𝗔𝗻𝘁𝗶 𝘁𝗼𝘅𝗶𝗰 ☣️`,`🥵 𝗔𝗻𝘁𝗶 𝘃𝗶𝗿𝘂𝘀 🦠`,`🥵 𝗔𝘂𝘁𝗼 𝘀𝘁𝗶𝗰𝗸𝗲𝗿 👻`,`🥵 𝗔𝘂𝘁𝗼 𝘀𝘁𝗶𝗰𝗸𝗲𝗿 𝗽𝗿𝗶𝘃𝗮𝘁𝗲 𝗰𝗵𝗮𝘁 👽`,`🥵 𝗔𝗻𝘁𝗶 𝗴𝗿𝗼𝘂𝗽 𝗹𝗶𝗻𝗸 🔗`,`🥵 𝗔𝗻𝘁𝗶 𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺 𝗹𝗶𝗻𝗸 🔗`,`🥵 𝗔𝗻𝘁𝗶 𝗧𝗶𝗸𝗧𝗼𝗸 𝗹𝗶𝗻𝗸 🔗`,`🥵 𝗔𝗻𝘁𝗶 𝗬𝗼𝘂𝗧𝘂𝗯𝗲 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 𝗹𝗶𝗻𝗸 🔗`,`🥵 𝗔𝗻𝘁𝗶 𝗬𝗼𝘂𝗧𝘂𝗯𝗲 𝘃𝗶𝗱𝗲𝗼 𝗹𝗶𝗻𝗸 🔗`,`🥵 𝗔𝗻𝘁𝗶 𝗜𝗻𝘀𝘁𝗮𝗴𝗿𝗮𝗺 𝗹𝗶𝗻𝗸 🔗`,`🥵 𝗔𝗻𝘁𝗶 𝗙𝗮𝗰𝗲𝗯𝗼𝗼𝗸 𝗹𝗶𝗻𝗸 🔗`,`🥵 𝗔𝗻𝘁𝗶 𝗧𝘄𝗶𝘁𝘁𝗲𝗿 𝗹𝗶𝗻𝗸 🔗`,`🥵 𝗔𝗻𝘁𝗶 𝗪𝗵𝗮𝘁𝘀𝗔𝗽𝗽 𝗽𝗿𝗼𝗳𝗶𝗹𝗲 𝗹𝗶𝗻𝗸 🔗`,`🥵 𝗡𝗦𝗙𝗪 💦`]
                     let startnum = 0; let startnu = 0; let startn = 0;let start = 0
                     let startnumm = 1
                     for (let x of com) {
@@ -1806,10 +1802,20 @@ if (isBanChat) return reply(mess.banChat)
 	if (isBanChat) return reply(mess.banChat)
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
-                    title: `Hi ${pushname}`,
-                    description: `Please Choose The Menu\n\n`,
-                    buttonText: "Menu",
-                    footerText: `${global.botname}`,
+                    title: `Aww my darling ${pushname} you need help? 🥺❤️`,
+                    description: `╭╼━᚜ 𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪 ᚛━╾╮
+│                                      ❒
+🔥 *My prefix*       : ( - )
+❤️ *My name*       : ${global.BotName}
+🥵 *User name*    : ${pushname}
+😻 *Bot speed*      : ${latensie.toFixed(4)} ms
+❤️‍🔥 *Bot users*      : ${Object.keys(global.db.users).length}
+🎃 *Owner name* : ${global.OwnerName}
+🍓 *Group name*  : ${groupMetadata.subject}
+│                                      ❒
+╰╼━━━━━━━━━━━━╾╯\n\n`,
+                    buttonText: "❤️⃟ ✮͢ 𝑻𝒂𝒑 𝒉𝒆𝒓𝒆 ✮⃝💙" ,
+                    footerText: `${global.BotName}`,
                     listType: "SINGLE_SELECT",
                     sections: [{
 								"title": "Initial Features Of Bot 🦄",
@@ -1969,6 +1975,47 @@ case 'animesearchxxx': case 'anime':{
     }
     break
 */
+
+case 'autosticker':
+            case 'autostiker':
+   if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+if (!m.isGroup) return replay(mess.group)
+if (!isBotAdmins) return reply(mess.botAdmin)
+if (!isAdmins && !isCreator) return reply(mess.admin)
+if (args.length < 1) return reply('type auto sticker on to enable\ntype auto sticker off to disable')
+if (args[0]  === 'on'){
+if (isAutoSticker) return reply(`Already activated`)
+autosticker.push(from)
+fs.writeFileSync('./database/autosticker.json', JSON.stringify(autosticker))
+reply('autosticker activated')
+} else if (args[0] === 'off'){
+let anu = autosticker.indexOf(from)
+autosticker.splice(anu, 1)
+fs.writeFileSync('./database/autosticker.json', JSON.stringify(autosticker))
+reply('auto sticker deactivated')
+}
+break
+
+
+case 'autostickerpc':
+            case 'autostikerpc':
+   if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+if (!m.isGroup) return replay(mess.group)
+if (args.length < 1) return reply('type autosticker on to activate\ntype autosticker off to disable')
+if (args[0]  === 'on'){
+if (isAutoStick) return reply(`Already activated`)
+_autostick.push(from)
+fs.writeFileSync('./database/autostickpc.json', JSON.stringify(autosticker))
+reply('autosticker pc activated')
+} else if (args[0] === 'disable'){
+let anu = autosticker.indexOf(from)
+_autostick.splice(anu, 1)
+fs.writeFileSync('./database/autostickpc.json', JSON.stringify(autosticker))
+reply('autosticker pc deactivated')
+}
+break
 
 case 'coffee': case 'kopi': {
         if (isBan) return reply(mess.banned)	 			
@@ -2746,9 +2793,9 @@ if (isBanChat) return reply(mess.bangc)
 │
 🔥 *Group name* : ${groupMetadata.subject}
 ├───────────♡
-🔥 *Message*      : ${args.join(" ") ? args.join(" ") : 'no message'}
+🔥 *Message* : ${args.join(" ") ? args.join(" ") : 'no message'}
 ├───────────♡
-🔥 *Announcer*   : @${m.sender.split('@')[0]}
+🔥 *Announcer* : @${m.sender.split('@')[0]}
 ╰╼━━━━━━━━━━━━━━━━━❒ \n\n╭╼━━━᚜ 𝓜𝓮𝓶𝓫𝓮𝓻𝓼 𝓝𝓪𝓶𝓮 ᚛━━━╾╮
 ╽                                                 ❒  ` 
                 for (let mem of participants) {
@@ -3695,34 +3742,45 @@ reply("Error link!")
 break
 
 case 'music': case 'play': case 'song': case 'ytplay': {
-    if (isBan) return reply(mess.banned)	 			
- if (isBanChat) return reply(mess.bangc)
- let yts = require("yt-search")
- let search = await yts(text)
- let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
- let ytvc = await hx.youtube(anu.url)
- let buttons = [
- {buttonId: `-ytvd ${ytvc.link}`, buttonText: {displayText: '► Video'}, type: 1},
- {buttonId: `-ytad ${ytvc.mp3}`, buttonText: {displayText: '♫ Audio'}, type: 1}
- ]
- let buttonMessage = {
- image: { url: anu.thumbnail },
- caption: `「  _Anya Youtube Player_  」
+   if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+let yts = require("yt-search")
+let search = await yts(text)
+let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
+let ytvc = await hx.youtube(anu.url)
+let buttons = [
+{buttonId: `ytvd ${ytvc.link}`, buttonText: {displayText: '► Video'}, type: 1},
+{buttonId: `ytad ${ytvc.mp3}`, buttonText: {displayText: '♫ Audio'}, type: 1}
+]
+let buttonMessage = {
+image: { url: anu.thumbnail },
+caption: `*| ANYA YOUTUBE PLAY |*
 
-*Title :* ${anu.title}
-*Duration :* ${anu.timestamp}
-*Viewers :* ${anu.views}
-*Uploaded :* ${anu.ago}
-*Channel :* ${anu.author.name}
-*Url :* ${anu.url}`,
- footer: `${global.BotName}`,
- buttons: buttons,
- headerType: 4,
-
- }
- Miku.sendMessage(m.chat, buttonMessage, { quoted: m })
- }
- break
+${global.themeemoji} Title : ${anu.title}
+${global.themeemoji} Ext : Search
+${global.themeemoji} ID : ${anu.videoId}
+${global.themeemoji} Duration : ${anu.timestamp}
+${global.themeemoji} Viewers : ${anu.views}
+${global.themeemoji} Uploaded : ${anu.ago}
+${global.themeemoji} Author : ${anu.author.name}
+${global.themeemoji} Channel : ${anu.author.url}
+${global.themeemoji} Description : ${anu.description}
+${global.themeemoji} Url : ${anu.url}`,
+footer: `${global.botname}`,
+buttons: buttons,
+headerType: 4,
+contextInfo:{externalAdReply:{
+title: anu.title,
+body: `${global.botname}`,
+thumbnail: log0,
+mediaType:2,
+mediaUrl: anu.url,
+sourceUrl: anu.url
+}}
+}
+Miku.sendMessage(m.chat, buttonMessage, { quoted: m })
+}
+break
 
  case 'getmusic': case 'getvideo': case 'yt': case 'youtube': case 'ytvideo': case 'ytmp3': case 'ytmp4': case 'ytmusic': {
     if (isBan) return reply(mess.banned)	 			
@@ -5170,8 +5228,8 @@ case 'allmenu': case 'help':{
 🔥 *My prefix*       : ( - )
 ❤️ *My name*       : ${global.BotName}
 🥵 *User name*    : ${pushname}
+😻 *Bot speed*      : ${latensie.toFixed(4)} miliseconds
 🎃 *Owner name* : ${global.OwnerName}
-😻 *Owner no.*     : http://wa.me//${global.Owner}
 🍓 *Group name*  : ${groupMetadata.subject}
 │                                      ❒
 ╰╼━━━━━━━━━━━━╾╯
@@ -5481,11 +5539,7 @@ case 'allmenu': case 'help':{
 
  『  𝓐𝓷𝔂𝓪 𝓱𝔂 𝓟𝓲𝓴𝓪  』
  Powered by : *Pika❤️*
- Using by       : *${pushname}*
- 
-
- 🔥 If you have any *Bot related* question then ask here *-* http://wa.me//${global.Owner} . `
-    
+ Using by       : *${pushname}*`    
 
  let buttonshelpm = [{buttonId: `${prefix}owner`, buttonText: {displayText: `❤️owner❤️`}, type: 1},
 		     {buttonId: `${prefix}tagall`, buttonText: {displayText: `Tag all ✨`}, type: 1},
@@ -5728,6 +5782,26 @@ const Nexusarray= [
         
             Miku.sendMessage(from,{video:{url:Nexusselection},gifPlayback:true,caption:txt},{quoted:m})
 
+break
+
+case 'checknumber':
+  reply(mess.wait)
+  const dripska = {
+    method: 'GET',
+    url: 'https://phonenumbervalidatefree.p.rapidapi.com/ts_PhoneNumberValidateTest.jsp',
+    qs: {number: `${text}`},
+    headers: {
+      'X-RapidAPI-Key': '837661b454msh274b6753ca80823p11c653jsn973bb2a55a34',
+      'X-RapidAPI-Host': 'phonenumbervalidatefree.p.rapidapi.com',
+      useQueryString: true
+    }
+  };
+  let dhidhi = require('request')
+  dhidhi(dripska, function (error, response, body) {
+    if (error) throw new Error(error);
+    reply(body);
+    console.log(body);
+  });
 break
 
 

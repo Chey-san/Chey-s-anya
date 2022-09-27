@@ -802,7 +802,6 @@ Miku.sendMessage(from, {text:`\`\`\`「 'wa.me' PM link Detected! 」\`\`\`\n\n@
   reply(sin)
   if (m.text) {
   bvl = `\`\`\`「 Bad Word Detected 」\`\`\`\n\nYou are using bad word but you are an admin that's why i won't kick you😇`
-  if (isAdmins) return reply(bvl)
   if (m.key.fromMe) return reply(bvl)
   if (isCreator) return reply(bvl)
   kice = m.sender
@@ -3677,7 +3676,7 @@ break
 
 
 
-case 'play2': case 'ytplay2': {
+case 'music': case 'play': case 'song': case 'ytplay': {
     if (isBan) return reply(mess.banned)
         if (isBanChat) return reply(mess.bangc)
      reply(mess.wait)
@@ -3701,7 +3700,7 @@ case 'play2': case 'ytplay2': {
     Author : ${anu.author.name}
     Channel : ${anu.author.url}
     Url : ${anu.url}`,
-                        footer: `${BotName}`,
+                        footer: `${global.BotName}`,
                         buttons: buttons,
                         headerType: 4
                     }
@@ -3742,7 +3741,7 @@ reply("Error link!")
 }
 break
 
-case 'music': case 'play': case 'song': case 'ytplay': {
+case 'play2': case 'ytplay2': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 let yts = require("yt-search")

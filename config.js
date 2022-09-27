@@ -7,13 +7,13 @@ global.autoReadAll = false
 global.antitags = true
 
 
-global.Owner = ['918811074852']
-global.OwnerNumber = ['918811074852']
-global.ownertag = ['918811074852']
-global.BotName = "Anya❤️"
-global.packname = "Anya bot"
-global.author = "By: Pika❤️"
-global.OwnerName = "3.69_pika"
+global.Owner = ['919153043616']
+global.OwnerNumber = ['919153043616']
+global.ownertag = ['919153043616']
+global.BotName = "Noora❤️"
+global.packname = "Noora bot"
+global.author = "By: mishab❤️"
+global.OwnerName = "mishab"
 global.BotSourceCode = "https://github.com/Pika4O4/Anya-pika"
 global.SupportGroupLink = "https://chat.whatsapp.com/H6CUtq40oRDKIofIEbf1qEl"
 global.sessionName = "session"

@@ -795,20 +795,20 @@ Miku.sendMessage(from, {text:`\`\`\`「 'wa.me' PM link Detected! 」\`\`\`\n\n@
   }
   }
 
-  if (antiToxic)
-  if (bad.includes(messagesD)) {
-  tos = ['Hey, watch your mouth','Never been taught how to speak?','Stop being toxic my friend🤢','Dont be toxic 🙂']
-  sin =  tos[Math.floor(Math.random() * (tos.length))]
-  reply(sin)
-  if (m.text) {
-  bvl = `\`\`\`「 Bad Word Detected 」\`\`\`\n\nYou are using bad word but you are an admin that's why i won't kick you😇`
-  if (isAdmins) return reply(bvl)
-  if (m.key.fromMe) return reply(bvl)
-  if (isCreator) return reply(bvl)
-  kice = m.sender
-  await Miku.groupParticipantsUpdate(m.chat, [kice], 'remove')
-  Miku.sendMessage(from, {text:`\`\`\`「 Bad Word Detected 」\`\`\`\n\n@${kice.split("@")[0]} was kicked because of using bad words in this group`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})}
-  }
+if (antiToxic)
+if (bad.includes(messagesD)) {
+tos = ['Hey, watch your mouth','Never been taught how to speak?','Stop being toxic my friend🤢','Dont be toxic🦄']
+sin =  tos[Math.floor(Math.random() * (tos.length))]
+reply(sin)
+if (m.text) {
+bvl = `\`\`\`「 Bad Word Detected 」\`\`\`\n\nYou are using bad word but you are an admin that's why i won't kick you😇`
+if (isAdmins) return reply(bvl)
+if (m.key.fromMe) return reply(bvl)
+if (isCreator) return reply(bvl)
+kice = m.sender
+await Miku.groupParticipantsUpdate(m.chat, [kice], 'remove')
+Miku.sendMessage(from, {text:`\`\`\`「 Bad Word Detected 」\`\`\`\n\n@${kice.split("@")[0]} was kicked because of using bad words in this group`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})}
+}
 
 
     if (AntiLink) {
@@ -2522,12 +2522,12 @@ replay('Success in turning off antivirus this group')
   }
   break
 
-case'antitoxic': {
-if (isBan) return reply(mess.banned)	 			
-if (isBanChat) return reply(mess.bangc)
-if (!m.isGroup) return replay(mess.grouponly)
-if (!isBotAdmins) return replay(mess.botadmin)
-if (!isAdmins && !isCreator) return replay(mess.useradmin)
+case 'antitoxic': {
+   if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+if (!m.isGroup) return replay(mess.group)
+if (!isBotAdmins) return replay(mess.botAdmin)
+if (!isAdmins && !isCreator) return replay(mess.admin)
 if (args[0] === "on") {
 if (antiToxic) return replay('Already activated')
 nttoxic.push(from)
@@ -2546,10 +2546,10 @@ nttoxic.splice(off, 1)
 replay('Success in turning off antitoxic in this group')
 } else {
   let buttonsnttoxci = [
-  { buttonId: `${prefix}antitoxic on`, buttonText: { displayText: 'On' }, type: 1 },
-  { buttonId: `${prefix}antitoxic off`, buttonText: { displayText: 'Off' }, type: 1 }
-   ]
-  await Miku.sendButtonText(m.chat, buttonsnttoxci, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.BotName}`, m)
+  { buttonId: `${command} on`, buttonText: { displayText: 'On' }, type: 1 },
+  { buttonId: `${command} off`, buttonText: { displayText: 'Off' }, type: 1 }
+  ]
+  await Miku.sendButtonText(m.chat, buttonsnttoxic, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.botname}`, m)
   }
   }
   break

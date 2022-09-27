@@ -134,6 +134,7 @@ let _leveling = JSON.parse(fs.readFileSync('./database/leveling.json'))
 let _level = JSON.parse(fs.readFileSync('./database/level.json'))
 let limit = JSON.parse(fs.readFileSync('./database/limit.json'))
 let setik = JSON.parse(fs.readFileSync('./src/sticker.json'))
+let gif = JSON.parse(fs.readFileSync('./src/Gif.json'))
 let vien = JSON.parse(fs.readFileSync('./src/audio.json'))
 let imagi = JSON.parse(fs.readFileSync('./src/image.json'))
 let videox = JSON.parse(fs.readFileSync('./src/video.json'))
@@ -215,10 +216,17 @@ const mongoose = require("mongoose");
 //bgm code//
 for (let nexus of vien){
     if (budy == nexus){
-	    result = fs.readFileSync(`./Anymedia/${nexus}.mp3`)
+	    result = fs.readFileSync(`./Anymedia/Audio.auto/${nexus}.mp3`)
 	    Miku.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4' , ptt: true }, { quoted: m})
 	}
 	} 
+
+for (let nexus of gif){
+    if (budy == nexus){
+	    result = fs.readFileSync(`./Anymedia/Gif.auto/${nexus}.mp4`)
+	    Miku.sendMessage(m.chat, { gif: result }, { quoted: m})
+	}
+	}
 
 for (let nexus of setik){
     if (budy === nexus){

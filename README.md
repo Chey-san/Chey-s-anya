@@ -1,8 +1,4 @@
-<p align="center">
-   <a href= "https://github.com/Pika4O4">
- 
-## [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Rockstar-ExtraBold&color=A020F0&lines=࿐𝐖𝐞𝐥𝐜𝐨𝐦𝐞+𝐓𝐨+𝒜𝓃𝓎𝒶-By-CHEY ࿐+❤️)]
-   
+
 </p>
 <h1 align="center"> Anya by Chey❤️
 </h1>
